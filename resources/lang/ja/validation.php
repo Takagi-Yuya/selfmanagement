@@ -144,6 +144,12 @@ return [
       'email' => 'メールアドレス',
       'password' => 'パスワード',
       'password_confirmation' => 'パスワード（確認）',
-      'name' => 'ユーザー名'
+      'name' => 'ユーザー名',
+      'introduction' => '自己紹介',
+      'title' => 'タイトル',
+      'body' => '内容',
+      'question' => '質問',
+      'answer' => '回答',
+      'reason' => '理由'
     ],
 ];

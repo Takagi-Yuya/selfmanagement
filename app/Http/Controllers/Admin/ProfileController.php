@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Profile;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller

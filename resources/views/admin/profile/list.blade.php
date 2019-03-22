@@ -7,25 +7,26 @@
       <h2>your profile</h2>
       <br>
       @if ($profile != null)
-        <div>
+        <div class="image col-md-4">
           @if ($profile->image_path != null)
             <img src="{{ asset('storage/image/' . $profile->image_path) }}" alt="">
           @endif
         </div>
-        <div>名前:{{ $profile->name }}</div>
-        <div>目標:{{ $profile->goal }}</div>
-        <div>自己紹介:{{ $profile->introduction }}</div>
         <br>
+        <p>名前：{{ $profile->name }}</p>
+        <p>目標：{{ $profile->goal }}</p>
+        <p>自己紹介：{{ $profile->introduction }}</p>
       @else
-        <div>プロフィールを作成しよう！</div>
-        <br>
+        <p>プロフィールを作成しよう！</p>
       @endif
-      <div class="col-md-4 mx-auto">
-        @if ($profile == null)
-          <a href="{{ action('Admin\ProfileController@add') }}" role='button' class='btn btn-primary'>新規作成</a>
-        @else
-          <a href="{{ action('Admin\ProfileController@edit', ['user_id'=> $profile->user_id]) }}" role='button' class='btn btn-primary'>編集</a>
-        @endif
+      <div class="row">
+        <div class="col-md-10 text-right">
+          @if ($profile == null)
+            <a href="{{ action('Admin\ProfileController@add') }}" role='button' class='btn btn-success'>新規作成</a>
+          @else
+            <a href="{{ action('Admin\ProfileController@edit', ['user_id'=> $profile->user_id]) }}" role='button' class='btn btn-success'>編集</a>
+          @endif
+        </div>
       </div>
     </div>
   </div>

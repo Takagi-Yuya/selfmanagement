@@ -19,6 +19,16 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!--とりあえずここに書いてるだけ-->
+    <style>
+    img {
+      width: 600px;
+      height: 500px;
+      object-fit: cover;
+    }
+    </style>
+
 </head>
 <body>
     <div id="app">
@@ -56,12 +66,12 @@
                                     </a>
                             </li>
                             <li class="nav-item">
-                                    <a class="nav-link" href="{{ action('Admin\OtherController@list') }}">
+                                    <a class="nav-link" href="{{ action('Admin\AnalysisController@list') }}">
                                         自己分析一覧
                                     </a>
                             </li>
                             <li class="nav-item">
-                                    <a class="nav-link" href="{{ action('Admin\AnalysisController@list') }}">
+                                    <a class="nav-link" href="{{ action('Admin\OtherController@list') }}">
                                         他己分析一覧
                                     </a>
                             </li>

@@ -33,7 +33,16 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::post('profile/edit', 'Admin\ProfileController@update');
     Route::get('diary/list', 'Admin\DiaryController@list');
     Route::get('diary/create', 'Admin\DiaryController@add');
+    Route::post('diary/create', 'Admin\DiaryController@create');
+    Route::get('diary/edit', 'Admin\DiaryController@edit');
+    Route::post('diary/edit', 'Admin\DiaryController@update');
+    Route::get('diary/delete', 'Admin\DiaryController@delete');
     Route::get('analysis/list', 'Admin\AnalysisController@list');
+    Route::get('analysis/create', 'Admin\AnalysisController@add');
+    Route::post('analysis/create', 'Admin\AnalysisController@create');
+    Route::get('analysis/edit', 'Admin\AnalysisController@edit');
+    Route::post('analysis/edit','Admin\AnalysisController@update');
+    Route::get('analysis/delete', 'Admin\AnalysisController@delete');
     Route::get('portfolio/list', 'Admin\PortfolioController@list');
     Route::get('other/list', 'Admin\OtherController@list');
 });

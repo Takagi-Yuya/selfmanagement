@@ -15,31 +15,35 @@
           </ul>
         @endif
         <div class="form-group row">
-          <label class="col-md-2" for="name">名前:</label>
+          <label class="col-md-2" for="name">名前：</label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="name" value="{{ old("name") }}">
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-md-2" for="goal">目標:</label>
+          <label class="col-md-2" for="goal">目標：</label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="goal" value="{{ old("goal") }}">
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-md-2" for="introduction">自己紹介:</label>
+          <label class="col-md-2" for="introduction">自己紹介：</label>
           <div class="col-md-10">
             <textarea class="form-control" name="introduction" rows="20">{{ old("introduction") }}</textarea>
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-md-2" for="image">画像:</label>
+          <label class="col-md-2" for="image">画像：</label>
           <div class="col-md-10">
             <input type="file" class="form-control-file" name="image">
           </div>
         </div>
-        @csrf
-        <input class="btn btn-primary" type="submit" value="完了">
+        <div class="form-group row">
+          <div class="col-md-10 text-right">
+            @csrf
+            <input class="btn btn-primary" type="submit" value="完了">
+          </div>
+        </div>
       </form>
     </div>
   </div>

@@ -1,0 +1,46 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <h2>analysis edit</h2>
+      <br>
+      <form action="{{ action("Admin\AnalysisController@update") }}" method="post" enctype="multipart/form-data">
+        @if (count($errors) > 0)
+          <ul>
+            @foreach ($errors->all() as $e)
+            <li>{{ $e }}</li>
+            @endforeach
+          </ul>
+        @endif
+        <div class="form-group row">
+          <label class="col-md-2" for="question">Q.質問：</label>
+          <div class="col-md-10">
+            <input class="form-control" type="text" name="question" value="{{ $analysis_form->question }}">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-2" for="answer">A.回答：</label>
+          <div class="col-md-10">
+            <input class="form-control" type="text" name="answer" value="{{ $analysis_form->answer }}">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-2" for="reason">理由：</label>
+          <div class="col-md-10">
+            <input class="form-control" type="text" name="reason" value="{{ $analysis_form->reason }}">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-10 text-right">
+            <input type="hidden" name="id" value="{{ $analysis_form->id }}">
+            @csrf
+            <input class="btn btn-primary" type="submit" value="更新">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+@endsection
