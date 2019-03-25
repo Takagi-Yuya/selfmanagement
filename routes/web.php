@@ -44,5 +44,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::post('analysis/edit','Admin\AnalysisController@update');
     Route::get('analysis/delete', 'Admin\AnalysisController@delete');
     Route::get('portfolio/list', 'Admin\PortfolioController@list');
-    Route::get('other/list', 'Admin\OtherController@list');
+    Route::get('other/list', 'Admin\OtherQuestionController@list');
+    Route::get('other/create', 'Admin\OtherQuestionController@add');
+    Route::post('other/create', 'Admin\OtherQuestionController@create');
+    Route::get('other/edit', 'Admin\OtherQuestionController@edit');
+    Route::post('other/edit','Admin\OtherQuestionController@update');
+    Route::get('other/delete', 'Admin\OtherQuestionController@delete');
+    Route::get('timeline/index', 'Admin\OtherQuestionController@index');
 });

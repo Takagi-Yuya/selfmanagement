@@ -71,8 +71,13 @@
                                     </a>
                             </li>
                             <li class="nav-item">
-                                    <a class="nav-link" href="{{ action('Admin\OtherController@list') }}">
+                                    <a class="nav-link" href="{{ action('Admin\OtherQuestionController@list') }}">
                                         他己分析一覧
+                                    </a>
+                            </li>
+                            <li class="nav-item">
+                                    <a class="nav-link" href="{{ action('Admin\OtherQuestionController@index') }}">
+                                        他己分析タイムライン
                                     </a>
                             </li>
                             <li class="nav-item">
