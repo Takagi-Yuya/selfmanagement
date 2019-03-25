@@ -28,7 +28,7 @@
       object-fit: cover;
     }
     .navbar {
-      background-color: #008080;
+      background-color: #0099CC;
     }
     </style>
 

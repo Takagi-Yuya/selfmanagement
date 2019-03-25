@@ -12,12 +12,31 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: white;
+                color: white;
+                text-shadow: 5px 5px 10px #333333;
                 font-family: 'Noto Sans JP', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+            }
+
+            .container {
+                background-image: url('images/2019-03-16 1.10.28.jpg');
+                position: relative;
+                z-index: 0;
+            }
+
+            .container::before {
+                content: '';
+                position: absolute;
+                top: -3px;
+                bottom: -3px;
+                left: -3px;
+                right: -3px;
+                background: inherit;
+                filter: blur(3px);
+                z-index: -1;
             }
 
             .full-height {
@@ -45,7 +64,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 120px;
             }
 
             .subtitle {
@@ -53,7 +72,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: white;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -68,7 +87,7 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="container flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -82,13 +101,12 @@
                     @endauth
                 </div>
             @endif
-
             <div class="content">
                 <div class="title m-b-md">
                     セルマネ
                 </div>
                 <div class="subtitle m-b-md">
-                    全ての人が目標へコミットする為の自己管理
+                    自分を見える化して目標へコミットしよう
                 </div>
             </div>
         </div>
