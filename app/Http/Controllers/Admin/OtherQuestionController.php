@@ -30,9 +30,20 @@ class OtherQuestionController extends Controller
         return view('admin.other.create');
     }
 
-    public function create(Request $request) //これから作成
+    public function create(Request $request)
     {
-        return view('admin.other.list');
+        $this->validate($request, OtherQuestion::$rules);
+
+        $question = new OtherQuestion;
+        $user = Auth::user();
+        $question->user_id = $user->id;
+        $form = $request->all();
+
+        unset($form['_token']);
+
+        $question->fill($form)->save();
+
+        return redirect('admin\other\list');
     }
 
     public function edit(Request $request) //これから作成
