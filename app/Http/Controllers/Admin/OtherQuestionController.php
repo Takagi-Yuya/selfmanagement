@@ -53,9 +53,18 @@ class OtherQuestionController extends Controller
         return view('admin.other.edit', ['question_form' => $question]);
     }
 
-    public function update(Request $request) //これから作成
+    public function update(Request $request)
     {
-        return view('admin.other.list');
+        $this->validate($request, OtherQuestion::$rules);
+
+        $question = OtherQuestion::where('id', $request->id)->first();
+        $question_form = $request->all();
+
+        unset($question_form['_token']);
+
+        $question->fill($question_form)->save();
+
+        return redirect('admin\other\list');
     }
 
     public function delete(Request $request)
