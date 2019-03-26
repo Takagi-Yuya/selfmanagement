@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\OtherQuestion;
 use App\OtherAnswer;
+use App\Profile;
 use Illuminate\Support\Facades\Auth;
 
 

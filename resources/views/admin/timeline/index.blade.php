@@ -9,12 +9,12 @@
         @foreach ($questions as $question)
           <div class="card mb-4">
             <div class="card-header">
-              {{ $question->user_id }}さんの質問
+              {{ $question->profile->name }}さんの質問
             </div>
             <div class="card-body">
               <p class="card-text">
                 <a href="{{ action('Admin\OtherAnswerController@show', ['id' => $question->id]) }}">
-                  <b>Q.質問：{{ $question->question }}</b> 
+                  <b>Q.質問：{{ $question->question }}</b>
                 </a>
               </p>
             </div>

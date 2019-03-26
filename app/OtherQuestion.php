@@ -22,6 +22,11 @@ class OtherQuestion extends Model
         return $this->belongsTo('App\User');
     }
 
+    public function profile()
+    {
+        return $this->belongsTo('App\Profile', 'user_id');
+    }
+
     public function other_answers()
     {
         return $this->hasmany('App\OtherAnswer', 'question_id');

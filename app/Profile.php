@@ -14,4 +14,11 @@ class Profile extends Model
       'name' => 'required',
       'introduction' => 'required'
     );
+
+    public function other_questions()
+    {
+        return $this->hasMany('App\OtherQuestion', 'user_id');
+    }
+
+
 }
