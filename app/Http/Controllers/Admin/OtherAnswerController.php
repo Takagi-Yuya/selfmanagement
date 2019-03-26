@@ -5,13 +5,17 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\OtherAnswer;
+use App\OtherQuestion;
 use Illuminate\Support\Facades\Auth;
 
 
 class OtherAnswerController extends Controller
 {
-    public function show()
+    public function show(Request $request)
     {
-        return view('admin.timeline.show');
+        $question = OtherQuestion::where('id', $request->id)->first();
+        $answers = OtherAnswer::where('question_id', $request->id)->orderBy('updated_at', 'desc')->get();
+
+        return view('admin.timeline.show', ['question'->$question, 'answers'->$answers]);
     }
 }
