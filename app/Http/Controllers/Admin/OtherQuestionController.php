@@ -46,9 +46,11 @@ class OtherQuestionController extends Controller
         return redirect('admin\other\list');
     }
 
-    public function edit(Request $request) //これから作成
+    public function edit(Request $request)
     {
-        return view('admin.other.list');
+        $question = OtherQuestion::where('id', $request->id)->first();
+
+        return view('admin.other.edit', ['question_form' => $question]);
     }
 
     public function update(Request $request) //これから作成
