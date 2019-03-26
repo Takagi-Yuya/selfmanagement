@@ -20,5 +20,10 @@ class Profile extends Model
         return $this->hasMany('App\OtherQuestion', 'user_id');
     }
 
+    public function other_answers()
+    {
+        return $this->hasMany('App\OtherAnswer', 'user_id');
+    }
+
 
 }

@@ -8,8 +8,8 @@
       <br>
         <div class="card mb-4">
           <div class="card-header">
-            <p>{{ $question->user_id }}さんの質問</p>
-            <p><b>{{ $question->question }}</b></p>
+            <p>{{ $question->profile->name }}さんの質問</p>
+            <p><b>Q.質問：{{ $question->question }}</b></p>
           </div>
           <div class="card-body">
             @if (count($answers) > 0)

@@ -23,6 +23,11 @@ class OtherAnswer extends Model
         return $this->belongsTo('App\User');
     }
 
+    public function profile()
+    {
+        return $this->belongsTo('App\Profile', 'user_id');
+    }
+
     public function other_questions()
     {
         return $this->belongsTo('App\OtherQuestion', 'question_id');
