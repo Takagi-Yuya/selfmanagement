@@ -13,7 +13,9 @@
             </div>
             <div class="card-body">
               <p class="card-text">
-                {{ $question->question }}
+                <a href="{{ action('Admin\OtherAnswerController@show', ['id' => $question->id]) }}">
+                  <b>Q.質問：{{ $question->question }}</b>
+                </a>
               </p>
             </div>
             <div class="card-footer">
@@ -21,11 +23,9 @@
                 投稿日時 <small>{{ $question->created_at->format('Y年m月d日') }}</small>
               </span>
               @if ($question->other_answers->count() != 0)
-                <a href="{{ action('Admin\OtherAnswerController@show', ['id' => $question->id]) }}">
                 <span class="badge badge-primary">
-                  コメント {{ $question->other_answers->count() }}件
+                  {{ $question->other_answers->count() }}件の回答があります
                 </span>
-                </a>
               @endif
             </div>
           </div>
