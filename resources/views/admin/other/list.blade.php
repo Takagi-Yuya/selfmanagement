@@ -12,7 +12,7 @@
             <div class="row">
               <div class="col-md-12">
                 <p><small>{{ $question->updated_at->format('Y年m月d日') }}</small></p>
-                <div class='mb-3'><b>Q.質問：{{ $question->question }}</b></div>
+                <p><b>Q.質問：{{ $question->question }}</b></p>
                 @foreach ($question->other_answers as $other_answer)
                 <p>A.回答：{{ $other_answer->answer }}</p>
                 <p>なぜ？：{{ $other_answer->reason }}</p>

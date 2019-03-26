@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\OtherQuestion;
+use App\OtherAnswer;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -46,7 +47,8 @@ class OtherQuestionController extends Controller
 
     public function delete(Request $request)
     {
-      $question = OtherQuestion::where('id', $request->id)->delete();
+        $question = OtherQuestion::where('id', $request->id)->delete();
+        $answers = OtherAnswer::where('question_id', $request->id)->delete();
 
         return redirect('admin\other\list');
     }
