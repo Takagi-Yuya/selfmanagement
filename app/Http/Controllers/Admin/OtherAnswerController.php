@@ -16,6 +16,6 @@ class OtherAnswerController extends Controller
         $question = OtherQuestion::where('id', $request->id)->first();
         $answers = OtherAnswer::where('question_id', $request->id)->orderBy('updated_at', 'desc')->get();
 
-        return view('admin.timeline.show', ['question' => $question, 'answers' => $answers]);
+        return view('admin.timeline.show', ['question' => $question, 'answers' => $answers]); 
     }
 }
