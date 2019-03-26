@@ -33,6 +33,5 @@ class OtherQuestionAnswersTableSeeder extends Seeder
                 $question->other_answers()->save($other);
             }
         }
-
     }
 }
