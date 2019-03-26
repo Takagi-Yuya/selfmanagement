@@ -65,7 +65,7 @@
                         @else
                             <li class="nav-item">
                                     <a class="nav-link" href="{{ url('/home') }}">
-                                        <i class="fas fa-flag"></i>トップ
+                                        <i class="fas fa-home"></i>ホーム
                                     </a>
                             </li>
                             <li class="nav-item">
