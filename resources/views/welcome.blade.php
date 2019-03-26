@@ -94,10 +94,10 @@
                     @auth
                         <a href="{{ url('/home') }}"><i class="fas fa-home"></i>ホーム</a>
                     @else
-                        <a href="{{ route('login') }}">ログイン</a>
+                        <a href="{{ route('login') }}"><i class="fas fa-key"></i>ログイン</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">新規ユーザー登録</a>
+                            <a href="{{ route('register') }}"><i class="fas fa-user-plus"></i>新規ユーザー登録</a>
                         @endif
                     @endauth
                 </div>

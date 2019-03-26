@@ -55,59 +55,59 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">ログイン</a>
+                                <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-key"></i>ログイン</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">新規ユーザー登録</a>
+                                    <a class="nav-link" href="{{ route('register') }}"><i class="fas fa-user-plus"></i>新規ユーザー登録</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item">
                                     <a class="nav-link" href="{{ url('/home') }}">
-                                        トップ
+                                        <i class="fas fa-flag"></i>トップ
                                     </a>
                             </li>
                             <li class="nav-item">
                                     <a class="nav-link" href="{{ action('Admin\AnalysisController@list') }}">
-                                        自己分析一覧
+                                        <i class="fas fa-id-card"></i>自己分析一覧
                                     </a>
                             </li>
                             <li class="nav-item">
                                     <a class="nav-link" href="{{ action('Admin\OtherQuestionController@list') }}">
-                                        他己分析一覧
+                                        <i class="far fa-id-card"></i>他己分析一覧
                                     </a>
                             </li>
                             <li class="nav-item">
                                     <a class="nav-link" href="{{ action('Admin\OtherQuestionController@index') }}">
-                                        他己分析タイムライン
+                                        <i class="fas fa-sort-amount-up"></i>他己分析タイムライン
                                     </a>
                             </li>
                             <li class="nav-item">
                                     <a class="nav-link" href="{{ action('Admin\DiaryController@list') }}">
-                                        日記一覧
+                                        <i class="fas fa-pencil-alt"></i>日記一覧
                                     </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ action('Admin\PortfolioController@list') }}">
-                                    ポートフォリオ
+                                    <i class="fas fa-chart-pie"></i>ポートフォリオ
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ action('Admin\ProfileController@list') }}">
-                                    プロフィール
+                                    <i class="fas fa-user"></i>プロフィール
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/about') }}">
-                                    about
+                                    <i class="fas fa-coffee"></i>about
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                    ログアウト
+                                    <i class="fas fa-door-open"></i>ログアウト
                                 </a>
                             </li>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
