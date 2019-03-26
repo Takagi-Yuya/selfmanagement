@@ -22,8 +22,12 @@
                   <p>※まだ回答はありません。</p>
                 @endif
                   <div class="col-md-11 text-right">
-                    <a href="{{ action('Admin\OtherQuestionController@edit', ['id' => $question->id]) }}" role='button' class='btn btn-success'>質問の編集</a>
-                    <a href="{{ action('Admin\OtherQuestionController@delete', ['id' => $question->id]) }}" role='button' class='btn btn-danger'>全て削除</a>
+                    @if (count($question->other_answers) > 0)
+                      <a href="{{ action('Admin\OtherQuestionController@delete', ['id' => $question->id]) }}" role='button' class='btn btn-danger'>全ての項目を削除</a>
+                    @else
+                      <a href="{{ action('Admin\OtherQuestionController@edit', ['id' => $question->id]) }}" role='button' class='btn btn-success'>編集</a>
+                      <a href="{{ action('Admin\OtherQuestionController@delete', ['id' => $question->id]) }}" role='button' class='btn btn-danger'>削除</a>
+                    @endif
                   </div>
                 </div>
               </div>
