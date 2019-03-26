@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Auth;
 
 class OtherAnswerController extends Controller
 {
-    public function list()
+    public function show()
     {
-        return view('admin.other.list');
+        return view('admin.timeline.show');
     }
 }

@@ -51,4 +51,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::post('other/edit','Admin\OtherQuestionController@update');
     Route::get('other/delete', 'Admin\OtherQuestionController@delete');
     Route::get('timeline/index', 'Admin\OtherQuestionController@index');
+    Route::get('timeline/show', 'Admin\OtherAnswerController@show');
 });
