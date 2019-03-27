@@ -23,7 +23,7 @@ Route::get('verified', function() {
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/about', 'HomeController@about');
-
+ 
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('profile/list', 'Admin\ProfileController@list');
