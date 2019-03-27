@@ -27,6 +27,7 @@
                 <p>なぜ？：{{ $answer->reason }}</p>
                 <div class="col-md-11 text-right">
                   <a href="{{ action('Admin\OtherAnswerController@edit', ['id' => $answer->id, 'id2' => $question->id]) }}" role='button' class='btn btn-success'>編集</a>
+                  <a href="{{ action('Admin\AnalysisController@delete', ['id' => $answer->id]) }}" role='button' class='btn btn-danger'>削除</a>
                 </div>
                 <hr size="3" color="gray">
               @endforeach
