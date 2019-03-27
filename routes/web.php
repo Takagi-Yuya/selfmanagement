@@ -56,5 +56,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::post('timeline/create', 'Admin\OtherAnswerController@create');
     Route::get('timeline/edit', 'Admin\OtherAnswerController@edit');
     Route::post('timeline/edit', 'Admin\OtherAnswerController@update');
-    Route::get('timeline/delete', 'Admin\OtherAnswerController@delete')
+    Route::get('timeline/delete', 'Admin\OtherAnswerController@delete');
 });
