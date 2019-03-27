@@ -9,7 +9,7 @@
       @if ($profile != null)
         <div class="image col-md-4">
           @if ($profile->image_path != null)
-            <img src="{{ asset('storage/image/' . $profile->image_path) }}" alt="">
+            <img src="{{ asset('storage/image/' . $profile->image_path) }}" alt="" class="image-profile">
           @endif
         </div>
         <br>

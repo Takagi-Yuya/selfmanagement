@@ -13,7 +13,7 @@
                 <p><small>{{ $diary->created_at->format('Y年m月d日') }}</small></p>
                 <div class="image col-md-4">
                   @if ($diary->image_path)
-                    <img src="{{ asset('storage/image/' . $diary->image_path) }}" alt="">
+                    <img src="{{ asset('storage/image/' . $diary->image_path) }}" alt="" class="image-diary">
                   @endif
                 </div>
                 <hr size="3" color="gray">

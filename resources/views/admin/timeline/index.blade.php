@@ -10,9 +10,13 @@
           <div class="card mb-4">
             <div class="card-header">
               @if ($question->profile == null)
-                {{ $question->user->name }}さんの質門
+                <p class="image">
+                  <img src="{{asset('images/noprofileimage.jpg')}}" alt="" class="image-mini mr-2">{{ $question->user->name }}さんの質門
+                </p>
               @else
-                {{ $question->profile->name }}さんの質問
+                <p class="image">
+                  <img src="{{ asset('storage/image/' . $question->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $question->profile->name }}さんの質問
+                </p>
               @endif
             </div>
             <div class="card-body">

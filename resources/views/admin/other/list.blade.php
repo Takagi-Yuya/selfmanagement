@@ -16,9 +16,13 @@
                 @if (count($question->other_answers) > 0)
                   @foreach ($question->other_answers as $other_answer)
                     @if ($other_answer->profile == null)
-                      <p>{{ $other_answer->user->name }}さんの回答</p>
-                    @else
-                      <p>{{ $other_answer->profile->name }}さんの回答</p>
+                    <p class="image">
+                      <img src="{{asset('images/noprofileimage.jpg')}}" alt="" class="image-mini mr-2">{{ $other_answer->user->name }}さんの回答
+                    </p>
+                  @else
+                    <p class="image">
+                      <img src="{{ asset('storage/image/' . $other_answer->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $other_answer->profile->name }}さんの回答
+                    </p>
                     @endif
                     <p>A.回答：{{ $other_answer->answer }}</p>
                     <p>なぜ？：{{ $other_answer->reason }}</p>

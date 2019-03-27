@@ -22,11 +22,23 @@
 
     <!--とりあえずここに書いてるだけ-->
     <style>
-    img {
+    .image-mini {
+      width: 32px;
+      height: 32px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .image-profile {
       width: 600px;
       height: 600px;
       object-fit: cover;
       border-radius: 50%;
+    }
+    .image-diary {
+      width: 600px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 10%;
     }
     .navbar {
       background-color: #0099CC;

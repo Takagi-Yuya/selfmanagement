@@ -9,9 +9,13 @@
         <div class="card mb-4">
           <div class="card-header">
             @if ($question->profile == null)
-              <p>{{ $question->user->name }}さんの質門</p>
+              <p class="image">
+                <img src="{{asset('images/noprofileimage.jpg')}}" alt="" class="image-mini mr-2">{{ $question->user->name }}さんの質門
+              </p>
             @else
-              <p>{{ $question->profile->name }}さんの質問</p>
+              <p class="image">
+                <img src="{{ asset('storage/image/' . $question->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $question->profile->name }}さんの質問
+              </p>
             @endif
             <p><b>Q.質問：{{ $question->question }}</b></p>
           </div>
@@ -19,9 +23,13 @@
             @if (count($answers) > 0)
               @foreach ($answers as $answer)
                 @if ($answer->profile == null)
-                  <p>{{ $answer->user->name }}さんの回答</p>
+                  <p class="image">
+                    <img src="{{asset('images/noprofileimage.jpg')}}" alt="" class="image-mini mr-2">{{ $answer->user->name }}さんの回答
+                  </p>
                 @else
-                  <p>{{ $answer->profile->name }}さんの回答</p>
+                  <p class="image">
+                    <img src="{{ asset('storage/image/' . $answer->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $answer->profile->name }}さんの回答
+                  </p>
                 @endif
                 <p>A.回答：{{ $answer->answer }}</p>
                 <p>なぜ？：{{ $answer->reason }}</p>

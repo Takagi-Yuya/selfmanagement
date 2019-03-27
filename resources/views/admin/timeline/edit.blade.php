@@ -9,9 +9,13 @@
       <div class="row">
         <div class="col-md-12">
           @if ($question->profile == null)
-            <p>{{ $question->user->name }}さんの質門</p>
+            <p class="image">
+              <img src="{{asset('images/noprofileimage.jpg')}}" alt="" class="image-mini mr-2">{{ $question->user->name }}さんの質門
+            </p>
           @else
-            <p>{{ $question->profile->name }}さんの質問</p>
+            <p class="image">
+              <img src="{{ asset('storage/image/' . $question->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $question->profile->name }}さんの質問
+            </p>
           @endif
           <p><b>Q.質問：{{ $question->question }}</b></p>
           <hr size="3" color="gray">
