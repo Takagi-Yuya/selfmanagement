@@ -54,6 +54,15 @@ class OtherAnswerController extends Controller
 
     public function update(Request $request)
     {
+        $this->validate($request,OtherAnswer::$rules);
+
+        $answer = OtherAnswer::where('id', $request->id)->first();
+        $answer_form = $request->all();
+
+        unset($answer_form['_token']);
+
+        $answer->fill($answer_form)->save();
+
         return redirect('admin\timeline\index');
     }
 
