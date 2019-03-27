@@ -47,7 +47,7 @@ class OtherAnswerController extends Controller
     public function edit(Request $request)
     {
         $answer = OtherAnswer::where('id', $request->id)->first();
-        $question = OtherQuestion::where('id', $request->id2)->first();
+        $question = OtherQuestion::where('id', $request->id_2)->first();
 
         return view('admin.timeline.edit', ['answer_form' => $answer, 'question' => $question]);
     }
