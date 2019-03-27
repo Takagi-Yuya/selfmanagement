@@ -22,6 +22,6 @@ class OtherAnswerController extends Controller
 
     public function add()
     {
-        return view('admin.timeline.create');
+        return view('admin.timeline.create'); 
     }
 }
