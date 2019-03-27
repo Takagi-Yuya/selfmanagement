@@ -14,7 +14,7 @@
           <div class="card-body">
             @if (count($answers) > 0)
               @foreach ($answers as $answer)
-              <p>{{ $answer->user_id }}さんの回答</p>
+              <p>{{ $answer->profile->name }}さんの回答</p>
               <p>A.回答：{{ $answer->answer }}</p>
               <p>なぜ？：{{ $answer->reason }}</p>
               <hr size="3" color="gray">
@@ -22,6 +22,11 @@
             @else
               <p>※まだ回答はありません。</p>
             @endif
+            <div class="row">
+              <div class="col-md-11 text-right">
+                <a href="{{ action('Admin\OtherAnswerController@add') }}" role='button' class='btn btn-success'>新規作成</a>
+              </div>
+            </div>
           </div>
           <div class="card-footer">
             <span class="mr-4">

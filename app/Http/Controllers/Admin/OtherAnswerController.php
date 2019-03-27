@@ -19,4 +19,9 @@ class OtherAnswerController extends Controller
 
         return view('admin.timeline.show', ['question' => $question, 'answers' => $answers]);
     }
+
+    public function add()
+    {
+        return view('admin.timeline.create');
+    }
 }
