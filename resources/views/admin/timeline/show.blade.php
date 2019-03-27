@@ -25,6 +25,9 @@
                 @endif
                 <p>A.回答：{{ $answer->answer }}</p>
                 <p>なぜ？：{{ $answer->reason }}</p>
+                <div class="col-md-11 text-right">
+                  <a href="{{ action('Admin\OtherAnswerController@edit', ['id' => $answer->id]) }}" role='button' class='btn btn-success'>編集</a>
+                </div>
                 <hr size="3" color="gray">
               @endforeach
             @else

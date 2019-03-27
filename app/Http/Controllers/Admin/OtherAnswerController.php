@@ -43,4 +43,12 @@ class OtherAnswerController extends Controller
 
         return redirect('admin\timeline\index');
     }
+
+    public function edit(Request $request)
+    {
+        $answer = OtherQuestion::where('id', $request->id)->first();
+
+        return view('admin.timeline.edit', ['answer_form' => $answer]);
+    }
+
 }
