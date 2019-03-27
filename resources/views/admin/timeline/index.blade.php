@@ -9,7 +9,11 @@
         @foreach ($questions as $question)
           <div class="card mb-4">
             <div class="card-header">
-              {{ $question->profile->name }}さんの質問
+              @if ($question->profile == null)
+                {{ $question->user->name }}さんの質門
+              @else
+                {{ $question->profile->name }}さんの質問
+              @endif
             </div>
             <div class="card-body">
               <p class="card-text">

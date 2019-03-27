@@ -8,7 +8,11 @@
       <br>
       <div class="row">
         <div class="col-md-12">
-          <p>{{ $question->profile->name }}さんの質問</p>
+          @if ($question->profile == null)
+            <p>{{ $question->user->name }}さんの質門</p>
+          @else
+            <p>{{ $question->profile->name }}さんの質問</p>
+          @endif
           <p><b>Q.質問：{{ $question->question }}</b></p>
           <hr size="3" color="gray">
         </div>
@@ -24,7 +28,7 @@
         <div class="form-group row">
           <label class="col-md-2" for="answer">A.回答：</label>
           <div class="col-md-10">
-            <input class="form-control" type="text" name="answer" value="{{ old("answer") }}" placeholder="{{ $question->profile->name }}さんへ回答をしてみよう">
+            <input class="form-control" type="text" name="answer" value="{{ old("answer") }}" placeholder="回答をしてみよう">
           </div>
         </div>
         <div class="form-group row">

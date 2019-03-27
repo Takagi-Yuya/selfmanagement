@@ -8,16 +8,24 @@
       <br>
         <div class="card mb-4">
           <div class="card-header">
-            <p>{{ $question->profile->name }}さんの質問</p>
+            @if ($question->profile == null)
+              <p>{{ $question->user->name }}さんの質門</p>
+            @else
+              <p>{{ $question->profile->name }}さんの質問</p>
+            @endif
             <p><b>Q.質問：{{ $question->question }}</b></p>
           </div>
           <div class="card-body">
             @if (count($answers) > 0)
               @foreach ($answers as $answer)
-              <p>{{ $answer->profile->name }}さんの回答</p>
-              <p>A.回答：{{ $answer->answer }}</p>
-              <p>なぜ？：{{ $answer->reason }}</p>
-              <hr size="3" color="gray">
+                @if ($answer->profile == null)
+                  <p>{{ $answer->user->name }}さんの回答</p>
+                @else
+                  <p>{{ $answer->profile->name }}さんの回答</p>
+                @endif
+                <p>A.回答：{{ $answer->answer }}</p>
+                <p>なぜ？：{{ $answer->reason }}</p>
+                <hr size="3" color="gray">
               @endforeach
             @else
               <p>※まだ回答はありません。</p>

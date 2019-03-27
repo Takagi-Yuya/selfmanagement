@@ -8,15 +8,21 @@
       <br>
         @if (count($questions) > 0)
           @foreach ($questions as $question)
-          <hr size="3" color="gray">
-            <div class="row">
+            <div class="row border border-secondary p-4 mb-4">
               <div class="col-md-12">
                 <p><small>{{ $question->updated_at->format('Y年m月d日') }}</small></p>
                 <p><b>Q.質問：{{ $question->question }}</b></p>
+                <hr size="3" color="gray">
                 @if (count($question->other_answers) > 0)
                   @foreach ($question->other_answers as $other_answer)
-                  <p>A.回答：{{ $other_answer->answer }}</p>
-                  <p>なぜ？：{{ $other_answer->reason }}</p>
+                    @if ($other_answer->profile == null)
+                      <p>{{ $other_answer->user->name }}さんの回答</p>
+                    @else
+                      <p>{{ $other_answer->profile->name }}さんの回答</p>
+                    @endif
+                    <p>A.回答：{{ $other_answer->answer }}</p>
+                    <p>なぜ？：{{ $other_answer->reason }}</p>
+                    <hr size="3" color="gray">
                   @endforeach
                 @else
                   <p>※まだ回答はありません。</p>
@@ -31,7 +37,6 @@
                   </div>
                 </div>
               </div>
-              <hr size="3" color="gray">
             @endforeach
           @else
             <p>他己分析をはじめよう！</p>
