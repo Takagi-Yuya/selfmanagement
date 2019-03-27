@@ -40,5 +40,8 @@
         @endforeach
     </div>
   </div>
+  <div class="d-flex justify-content-center">
+    {{ $questions->links() }}
+  </div>
 </div>
 @endsection

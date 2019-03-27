@@ -12,7 +12,7 @@ class DiaryController extends Controller
 {
     public function list()
     {
-        $diaries = Diary::where('user_id', Auth::id())->orderBy('created_at', 'desc')->get();
+        $diaries = Diary::where('user_id', Auth::id())->orderBy('created_at', 'desc')->paginate(10);
 
         return view('admin.diary.list', ['diaries' => $diaries]);
     }

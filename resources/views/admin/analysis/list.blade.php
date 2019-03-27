@@ -33,5 +33,8 @@
         </div>
     </div>
   </div>
+  <div class="d-flex justify-content-center">
+    {{ $analyses->links() }}
+  </div>
 </div>
 @endsection

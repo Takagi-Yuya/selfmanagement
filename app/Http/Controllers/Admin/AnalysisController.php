@@ -12,7 +12,7 @@ class AnalysisController extends Controller
 {
     public function list()
     {
-        $analyses = Analysis::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
+        $analyses = Analysis::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->paginate(10);
 
         return view('admin.analysis.list', ['analyses' => $analyses]);
     }
