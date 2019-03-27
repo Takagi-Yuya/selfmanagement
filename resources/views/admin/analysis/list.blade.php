@@ -8,11 +8,11 @@
       <br>
         @if (count($analyses) > 0)
           @foreach ($analyses as $analysis)
-          <hr size="3" color="gray">
-            <div class="row">
+            <div class="row border border-secondary p-4 mb-4">
               <div class="col-md-12">
                 <p><small>{{ $analysis->updated_at->format('Y年m月d日') }}</small></p>
-                <p>Q.質問：{{ $analysis->question }}</p>
+                <p><b>Q.質問：{{ $analysis->question }}</b></p>
+                <hr size="3" color="gray">
                 <p>A.回答：{{ $analysis->answer }}</p>
                 <p>なぜ？：{{ $analysis->reason }}</p>
                 <div class="col-md-11 text-right">
@@ -21,7 +21,6 @@
                 </div>
               </div>
             </div>
-            <hr size="3" color="gray">
           @endforeach
         @else
           <p>自己分析をはじめよう！</p>

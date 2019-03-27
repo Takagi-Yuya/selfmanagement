@@ -8,8 +8,7 @@
       <br>
         @if (count($diaries) > 0)
           @foreach ($diaries as $diary)
-          <hr size="3" color="gray">
-            <div class="row">
+            <div class="row border border-secondary p-3 mb-5">
               <div class="col-md-12">
                 <p><small>{{ $diary->created_at->format('Y年m月d日') }}</small></p>
                 <div class="image col-md-4">
@@ -17,15 +16,17 @@
                     <img src="{{ asset('storage/image/' . $diary->image_path) }}" alt="">
                   @endif
                 </div>
+                <hr size="3" color="gray">
                 <p>タイトル：{{ $diary->title }}</p>
+                <hr size="3" color="gray">
                 <p>内容：{{ $diary->body }}</p>
+                <hr size="3" color="gray">
                 <div class="col-md-11 text-right">
                   <a href="{{ action('Admin\DiaryController@edit', ['id' => $diary->id]) }}" role='button' class='btn btn-success'>編集</a>
                   <a href="{{ action('Admin\DiaryController@delete', ['id' => $diary->id]) }}" role='button' class='btn btn-danger'>削除</a>
                 </div>
               </div>
             </div>
-            <hr size="3" color="gray">
           @endforeach
         @else
           <p>日記を作成しよう！</p>
