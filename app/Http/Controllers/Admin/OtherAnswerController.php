@@ -27,8 +27,20 @@ class OtherAnswerController extends Controller
         return view('admin.timeline.create', ['question' => $question]);
     }
 
-    public function create()
+    public function create(Request $request)
     {
-        return view('admin.timeline.create');
+        $this->validate($request, OtherAnswer::$rules);
+
+        $answer = new OtherAnswer;
+        $user = Auth::user();
+        $answer->user_id = $user->id;
+        $answer->question_id = $request->question_id;
+        $form = $request->all();
+
+        unset($form['_token']);
+
+        $answer->fill($form)->save();
+
+        return redirect('admin\timeline\index');
     }
 }

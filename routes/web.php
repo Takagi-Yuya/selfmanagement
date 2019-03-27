@@ -23,7 +23,7 @@ Route::get('verified', function() {
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/about', 'HomeController@about');
- 
+
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('profile/list', 'Admin\ProfileController@list');
@@ -52,6 +52,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('other/delete', 'Admin\OtherQuestionController@delete');
     Route::get('timeline/index', 'Admin\OtherQuestionController@index');
     Route::get('timeline/show', 'Admin\OtherAnswerController@show');
-    Route::get('timeline/add', 'Admin\OtherAnswerController@add');
+    Route::get('timeline/create', 'Admin\OtherAnswerController@add');
     Route::post('timeline/create', 'Admin\OtherAnswerController@create');
 });

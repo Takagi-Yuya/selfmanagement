@@ -35,6 +35,7 @@
         </div>
         <div class="form-group row">
           <div class="col-md-10 text-right">
+            <input type="hidden" name="question_id" value="{{ $question->id }}">
             @csrf
             <input class="btn btn-primary" type="submit" value="完了">
           </div>
