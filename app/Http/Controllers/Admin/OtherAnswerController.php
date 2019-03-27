@@ -20,8 +20,15 @@ class OtherAnswerController extends Controller
         return view('admin.timeline.show', ['question' => $question, 'answers' => $answers]);
     }
 
-    public function add()
+    public function add(Request $request)
     {
-        return view('admin.timeline.create'); 
+        $question = OtherQuestion::where('id', $request->id)->first();
+
+        return view('admin.timeline.create', ['question' => $question]);
+    }
+
+    public function create()
+    {
+        return view('admin.timeline.create');
     }
 }

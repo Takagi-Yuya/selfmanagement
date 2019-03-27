@@ -24,7 +24,7 @@
             @endif
             <div class="row">
               <div class="col-md-11 text-right">
-                <a href="{{ action('Admin\OtherAnswerController@add') }}" role='button' class='btn btn-success'>新規作成</a>
+                <a href="{{ action('Admin\OtherAnswerController@add', ['id' => $question->id]) }}" role='button' class='btn btn-success'>新規作成</a>
               </div>
             </div>
           </div>
