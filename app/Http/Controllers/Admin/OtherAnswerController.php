@@ -16,8 +16,9 @@ class OtherAnswerController extends Controller
     {
         $question = OtherQuestion::where('id', $request->id)->first();
         $answers = OtherAnswer::where('question_id', $request->id)->orderBy('updated_at', 'desc')->get();
+        $user = Auth::user();
 
-        return view('admin.timeline.show', ['question' => $question, 'answers' => $answers]);
+        return view('admin.timeline.show', ['question' => $question, 'answers' => $answers, 'user' => $user]);
     }
 
     public function add(Request $request)
