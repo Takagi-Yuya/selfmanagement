@@ -66,4 +66,12 @@ class OtherAnswerController extends Controller
         return redirect('admin\timeline\index');
     }
 
+    public function delete(Request $request)
+    {
+        $answers = OtherAnswer::where('id', $request->id)->delete();
+
+        return redirect('admin\timeline\index');
+    }
+
+
 }
