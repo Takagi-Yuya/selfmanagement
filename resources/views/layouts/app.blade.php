@@ -24,8 +24,9 @@
     <style>
     img {
       width: 600px;
-      height: 500px;
+      height: 600px;
       object-fit: cover;
+      border-radius: 50%;
     }
     .navbar {
       background-color: #0099CC;
