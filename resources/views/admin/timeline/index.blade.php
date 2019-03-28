@@ -28,7 +28,7 @@
             </div>
             <div class="card-footer">
               <span class="mr-5">
-                投稿日時 <small>{{ $question->created_at->format('Y年m月d日') }}</small>
+                <small>{{ $question->created_at->format('Y年m月d日') }}</small>
               </span>
               @if ($question->other_answers->count() != 0)
                 <span>
