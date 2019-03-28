@@ -138,7 +138,7 @@
     <footer>
         <div align="center">
             <hr>
-            <p class="copyright">(C) 2019 self management   by T.Y.</p>
+            <p class="copyright">(C) 2019 self management written by T.Y.</p>
         </div>
     </footer>
 </body>
