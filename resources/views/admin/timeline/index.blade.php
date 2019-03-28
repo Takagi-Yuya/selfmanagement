@@ -27,13 +27,17 @@
               </p>
             </div>
             <div class="card-footer">
-              <span class="mr-4">
+              <span class="mr-5">
                 投稿日時 <small>{{ $question->created_at->format('Y年m月d日') }}</small>
               </span>
               @if ($question->other_answers->count() != 0)
-                <span class="badge badge-primary">
-                  {{ $question->other_answers->count() }}件の回答があります
+                <span>
+                  <i class="far fa-comment"></i> {{ $question->other_answers->count() }}
                 </span>
+              @else
+              <span>
+                <i class="far fa-comment"></i> 0
+              </span>
               @endif
             </div>
           </div>
