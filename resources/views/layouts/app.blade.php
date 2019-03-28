@@ -29,8 +29,8 @@
       border-radius: 50%;
     }
     .image-profile {
-      width: 600px;
-      height: 600px;
+      width: 500px;
+      height: 500px;
       object-fit: cover;
       border-radius: 50%;
     }

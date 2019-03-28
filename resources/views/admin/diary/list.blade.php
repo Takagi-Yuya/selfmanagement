@@ -11,7 +11,7 @@
             <div class="row border border-secondary p-3 mb-5">
               <div class="col-md-12">
                 <p><small>{{ $diary->created_at->format('Y年m月d日') }}</small></p>
-                <div class="image col-md-4">
+                <div class="image col-md-12 mx-auto">
                   @if ($diary->image_path)
                     <img src="{{ asset('storage/image/' . $diary->image_path) }}" alt="" class="image-diary">
                   @endif
