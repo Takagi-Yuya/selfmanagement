@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'セルマネ') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 
     <!-- Fonts -->
@@ -29,18 +29,6 @@
       height: 32px;
       object-fit: cover;
       border-radius: 50%;
-    }
-    .image-profile {
-      width: 500px;
-      height: 500px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-    .image-diary {
-      width: 600px;
-      height: 500px;
-      object-fit: cover;
-      border-radius: 10%;
     }
     .navbar {
       background-color: #0099CC;
