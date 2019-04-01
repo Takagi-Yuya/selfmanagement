@@ -6,15 +6,16 @@
     <div class="col-md-10 mx-auto">
       <h2>profile create</h2>
       <br>
+      @if ($portfolio != null)
         <canvas id="nowChart"></canvas>
         <script>
           var ctx = document.getElementById("nowChart").getContext("2d");
           var myBar = new Chart(ctx, {
               type: 'bar',                           //◆棒グラフ
               data: {                                //◆データ
-                  labels: ['A','B','C','D','E','F','G','H','I','J'],     //ラベル名
+                  labels: [{{$portfolio->item_a}}, {{$portfolio->item_b}}, {{$portfolio->item_c}}, {{$portfolio->item_d}}, {{$portfolio->item_e}}, {{$portfolio->item_f}}, {{$portfolio->item_g}}, {{$portfolio->item_h}}, {{$portfolio->item_i}}, {{$portfolio->item_j}}],
                   datasets: [{                       //データ設定
-                      data: [4,3,2,3,1,2,2,1,0,0],          //データ内容
+                      data: [{{$portfolio->value_before_a}}, {{$portfolio->value_before_b}}, {{$portfolio->value_before_c}}, {{$portfolio->value_before_d}}, {{$portfolio->value_before_e}}, {{$portfolio->value_before_f}}, {{$portfolio->value_before_g}}, {{$portfolio->value_before_h}}, {{$portfolio->value_before_i}}, {{$portfolio->value_before_j}}],
                       backgroundColor: ['red', 'blue', 'green', 'yellow', 'pink', 'orange','skyblue', 'purple', 'lightgreen', 'silver']   //背景色
                   }]
               },
@@ -68,11 +69,6 @@
               }
           });
         </script>
-        <div class="row">
-          <div class="col-md-10 text-right">
-            <a href="{{ action('Admin\PortfolioController@add') }}" role='button' class='btn btn-success'>新規作成</a>
-          </div>
-        </div>
         <br>
         <hr>
         <br>
@@ -82,9 +78,9 @@
         var myBar = new Chart(ctx, {
             type: 'bar',                           //◆棒グラフ
             data: {                                //◆データ
-                labels: ['A','B','C','D','E','F','G','H','I','J'],     //ラベル名
+                labels: [{{$portfolio->item_a}}, {{$portfolio->item_b}}, {{$portfolio->item_c}}, {{$portfolio->item_d}}, {{$portfolio->item_e}}, {{$portfolio->item_f}}, {{$portfolio->item_g}}, {{$portfolio->item_h}}, {{$portfolio->item_i}}, {{$portfolio->item_j}}],
                 datasets: [{                       //データ設定
-                    data: [5,8,9,6,6,4,3,6,8,10],          //データ内容
+                    data: [{{$portfolio->value_after_a}}, {{$portfolio->value_after_b}}, {{$portfolio->value_after_c}}, {{$portfolio->value_after_d}}, {{$portfolio->value_after_e}}, {{$portfolio->value_after_f}}, {{$portfolio->value_after_g}}, {{$portfolio->value_after_h}}, {{$portfolio->value_after_i}}, {{$portfolio->value_after_j}}],
                     backgroundColor: ['red', 'blue', 'green', 'yellow', 'pink', 'orange','skyblue', 'purple', 'lightgreen', 'silver']   //背景色
                 }]
             },
@@ -138,6 +134,14 @@
             }
         });
       </script>
+      @else
+        <p>”現在の自分”→”目標とする未来の自分”　2つのポートフォリオを作成しよう！</p>
+        <div class="row">
+          <div class="col-md-10 text-right">
+            <a href="{{ action('Admin\PortfolioController@add') }}" role='button' class='btn btn-success'>新規作成</a>
+          </div>
+        </div>
+      @endif
     </div>
   </div>
 </div>

@@ -12,7 +12,10 @@ class PortfolioController extends Controller
 {
     public function list()
     {
-        return view('admin.portfolio.list');
+        $user = Auth::user();
+        $portfolio = Portfolio::find($user->id);
+
+        return view('admin.portfolio.list', ['portfolio' => $portfolio]);
     }
 
     public function add()
