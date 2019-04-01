@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-10 mx-auto">
-      <h2>profile create</h2>
+      <h2>portfolio list</h2>
       <br>
       @if ($portfolio != null)
         <canvas id="nowChart"></canvas>
@@ -13,7 +13,7 @@
           var myBar = new Chart(ctx, {
               type: 'bar',                           //◆棒グラフ
               data: {                                //◆データ
-                  labels: [{{$portfolio->item_a}}, {{$portfolio->item_b}}, {{$portfolio->item_c}}, {{$portfolio->item_d}}, {{$portfolio->item_e}}, {{$portfolio->item_f}}, {{$portfolio->item_g}}, {{$portfolio->item_h}}, {{$portfolio->item_i}}, {{$portfolio->item_j}}],
+                  labels: ["{{$portfolio->item_a}}", "{{$portfolio->item_b}}", "{{$portfolio->item_c}}", "{{$portfolio->item_d}}", "{{$portfolio->item_e}}", "{{$portfolio->item_f}}", "{{$portfolio->item_g}}", "{{$portfolio->item_h}}", "{{$portfolio->item_i}}", "{{$portfolio->item_j}}"],
                   datasets: [{                       //データ設定
                       data: [{{$portfolio->value_before_a}}, {{$portfolio->value_before_b}}, {{$portfolio->value_before_c}}, {{$portfolio->value_before_d}}, {{$portfolio->value_before_e}}, {{$portfolio->value_before_f}}, {{$portfolio->value_before_g}}, {{$portfolio->value_before_h}}, {{$portfolio->value_before_i}}, {{$portfolio->value_before_j}}],
                       backgroundColor: ['red', 'blue', 'green', 'yellow', 'pink', 'orange','skyblue', 'purple', 'lightgreen', 'silver']   //背景色
@@ -49,12 +49,10 @@
                           barPercentage: 0.4,           //棒グラフ幅
                           categoryPercentage: 0.4,      //棒グラフ幅
                           scaleLabel: {                 //軸ラベル設定
-                             display: true,             //表示設定
-                             labelString: '項目',  //ラベル
-                             fontSize: 18               //フォントサイズ
+                             display: true             //表示設定
                           },
                           ticks: {
-                              fontSize: 18             //フォントサイズ
+                              fontSize: 15             //フォントサイズ
                           },
                       }],
                   },
@@ -78,7 +76,7 @@
         var myBar = new Chart(ctx, {
             type: 'bar',                           //◆棒グラフ
             data: {                                //◆データ
-                labels: [{{$portfolio->item_a}}, {{$portfolio->item_b}}, {{$portfolio->item_c}}, {{$portfolio->item_d}}, {{$portfolio->item_e}}, {{$portfolio->item_f}}, {{$portfolio->item_g}}, {{$portfolio->item_h}}, {{$portfolio->item_i}}, {{$portfolio->item_j}}],
+                labels: ["{{$portfolio->item_a}}", "{{$portfolio->item_b}}", "{{$portfolio->item_c}}", "{{$portfolio->item_d}}", "{{$portfolio->item_e}}", "{{$portfolio->item_f}}", "{{$portfolio->item_g}}", "{{$portfolio->item_h}}", "{{$portfolio->item_i}}", "{{$portfolio->item_j}}"],
                 datasets: [{                       //データ設定
                     data: [{{$portfolio->value_after_a}}, {{$portfolio->value_after_b}}, {{$portfolio->value_after_c}}, {{$portfolio->value_after_d}}, {{$portfolio->value_after_e}}, {{$portfolio->value_after_f}}, {{$portfolio->value_after_g}}, {{$portfolio->value_after_h}}, {{$portfolio->value_after_i}}, {{$portfolio->value_after_j}}],
                     backgroundColor: ['red', 'blue', 'green', 'yellow', 'pink', 'orange','skyblue', 'purple', 'lightgreen', 'silver']   //背景色
@@ -114,12 +112,10 @@
                         barPercentage: 0.4,           //棒グラフ幅
                         categoryPercentage: 0.4,      //棒グラフ幅
                         scaleLabel: {                 //軸ラベル設定
-                           display: true,             //表示設定
-                           labelString: '項目',  //ラベル
-                           fontSize: 18               //フォントサイズ
+                           display: true             //表示設定
                         },
                         ticks: {
-                            fontSize: 18             //フォントサイズ
+                            fontSize: 15             //フォントサイズ
                         },
                     }],
                 },

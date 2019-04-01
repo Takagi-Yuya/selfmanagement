@@ -22,4 +22,20 @@ class PortfolioController extends Controller
     {
         return view('admin.portfolio.create');
     }
+
+    public function create(Request $request)
+    {
+        $this->validate($request, Portfolio::$rules);
+
+        $portfolio = new Portfolio;
+        $user = Auth::user();
+        $portfolio->user_id = $user->id;
+        $form = $request->all();
+
+        unset($form['_token']);
+
+        $portfolio->fill($form)->save();
+
+        return redirect('admin\portfolio\list');
+    }
 }
