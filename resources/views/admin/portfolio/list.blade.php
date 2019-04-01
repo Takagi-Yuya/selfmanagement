@@ -130,6 +130,11 @@
             }
         });
       </script>
+      <div class="row">
+        <div class="col-md-10 text-right">
+          <a href="{{ action('Admin\PortfolioController@edit', ['user_id' => $portfolio->user_id]) }}" role='button' class='btn btn-success'>編集</a>
+        </div>
+      </div>
       @else
         <p>”現在の自分”→”目標とする未来の自分”　2つのポートフォリオを作成しよう！</p>
         <div class="row">

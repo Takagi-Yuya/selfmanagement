@@ -38,4 +38,25 @@ class PortfolioController extends Controller
 
         return redirect('admin\portfolio\list');
     }
+
+    public function edit(Request $request)
+    {
+        $portfolio = Portfolio::find($request->user_id);
+
+        return view('admin.portfolio.edit', ['portfolio_form' => $portfolio]);
+    }
+
+    public function update(Request $request)
+    {
+        $this->validate($request, Portfolio::$rules);
+
+        $portfolio = Portfolio::find($request->user_id);
+        $portfolio_form =$request->all();
+
+        unset($portfolio_form['_token']);
+
+        $portfolio->fill($portfolio_form)->save();
+
+        return redirect('admin/portfolio/list');
+    }
 }
