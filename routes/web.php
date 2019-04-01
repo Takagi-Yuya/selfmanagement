@@ -17,15 +17,12 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 
-Route::get('verified', function() {
-    return '本登録が完了しています。';
-})->middleware('verified');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/about', 'HomeController@about');
 
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth' ,'middleware' => 'verified'], function() {
     Route::get('profile/list', 'Admin\ProfileController@list');
     Route::get('profile/create', 'Admin\ProfileController@add');
     Route::post('profile/create', 'Admin\ProfileController@create');
