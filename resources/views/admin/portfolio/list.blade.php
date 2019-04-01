@@ -12,10 +12,10 @@
           var myBar = new Chart(ctx, {
               type: 'bar',                           //◆棒グラフ
               data: {                                //◆データ
-                  labels: ['A','B','C','D'],     //ラベル名
+                  labels: ['A','B','C','D','E','F','G','H','I','J'],     //ラベル名
                   datasets: [{                       //データ設定
-                      data: [4,3,2,3],          //データ内容
-                      backgroundColor: ['#FF4444', '#4444FF', '#44BB44', '#FFFF44', '#FF44FF']   //背景色
+                      data: [4,3,2,3,1,2,2,1,0,0],          //データ内容
+                      backgroundColor: ['red', 'blue', 'green', 'yellow', 'pink', 'orange','skyblue', 'purple', 'lightgreen', 'silver']   //背景色
                   }]
               },
               options: {                             //◆オプション
@@ -39,8 +39,8 @@
                           ticks: {                      //最大値最小値設定
                               min: 0,                   //最小値
                               max: 10,                  //最大値
-                              fontSize: 18,             //フォントサイズ
-                              stepSize: 5               //軸間隔
+                              fontSize: 15,             //フォントサイズ
+                              stepSize: 1               //軸間隔
                           },
                       }],
                       xAxes: [{                         //x軸設定
@@ -68,6 +68,11 @@
               }
           });
         </script>
+        <div class="row">
+          <div class="col-md-10 text-right">
+            <a href="{{ action('Admin\PortfolioController@add') }}" role='button' class='btn btn-success'>新規作成</a>
+          </div>
+        </div>
         <br>
         <hr>
         <br>
@@ -77,10 +82,10 @@
         var myBar = new Chart(ctx, {
             type: 'bar',                           //◆棒グラフ
             data: {                                //◆データ
-                labels: ['A','B','C','D','E'],     //ラベル名
+                labels: ['A','B','C','D','E','F','G','H','I','J'],     //ラベル名
                 datasets: [{                       //データ設定
-                    data: [5,8,9,6,6],          //データ内容
-                    backgroundColor: ['#FF4444', '#4444FF', '#44BB44', '#FFFF44', '#FF44FF']   //背景色
+                    data: [5,8,9,6,6,4,3,6,8,10],          //データ内容
+                    backgroundColor: ['red', 'blue', 'green', 'yellow', 'pink', 'orange','skyblue', 'purple', 'lightgreen', 'silver']   //背景色
                 }]
             },
             options: {                             //◆オプション
@@ -104,8 +109,8 @@
                         ticks: {                      //最大値最小値設定
                             min: 0,                   //最小値
                             max: 10,                  //最大値
-                            fontSize: 18,             //フォントサイズ
-                            stepSize: 5               //軸間隔
+                            fontSize: 15,             //フォントサイズ
+                            stepSize: 1               //軸間隔
                         },
                     }],
                     xAxes: [{                         //x軸設定

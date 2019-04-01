@@ -57,5 +57,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::post('timeline/edit', 'Admin\OtherAnswerController@update');
     Route::get('timeline/delete', 'Admin\OtherAnswerController@delete');
     Route::get('portfolio/list', 'Admin\PortfolioController@list');
-    Route::get('portfolio/create', 'Admin\PortfolioController@add')
+    Route::get('portfolio/create', 'Admin\PortfolioController@add');
 });
