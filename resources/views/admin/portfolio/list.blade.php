@@ -7,8 +7,8 @@
       <h2>portfolio list</h2>
       <br>
       @if ($portfolio != null)
-        <p>スキルアップ出来たと感じたらポートフォリオを更新しよう！</p>
-        <p>新たな目標が出来たらポートフォリオに項目を追加しよう！</p>
+        <p><i class="far fa-check-circle"></i>スキルアップ出来たと感じたらポートフォリオを更新しよう！</p>
+        <p><i class="far fa-check-circle"></i>新たな目標が出来たらポートフォリオに項目を追加しよう！</p>
         <br>
         <canvas id="nowChart" height="250"></canvas>
         <script>

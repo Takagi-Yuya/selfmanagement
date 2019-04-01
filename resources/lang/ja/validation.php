@@ -150,6 +150,15 @@ return [
       'body' => '内容',
       'question' => '質問',
       'answer' => '回答',
-      'reason' => '理由'
+      'reason' => '理由',
+      'item_a' => 'スキル項目A',
+      'item_b' => 'スキル項目B',
+      'item_c' => 'スキル項目C',
+      'value_before_a' => '現在の数値',
+      'value_before_b' => '現在の数値',
+      'value_before_c' => '現在の数値',
+      'value_after_a' => '目標とする数値',
+      'value_after_b' => '目標とする数値',
+      'value_after_c' => '目標とする数値',
     ],
 ];
