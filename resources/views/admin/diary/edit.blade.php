@@ -15,13 +15,13 @@
           </ul>
         @endif
         <div class="form-group row">
-          <label class="col-md-2" for="title">タイトル：</label>
+          <label class="col-md-2" for="title"><span class="badge badge-danger">必須</span>タイトル：</label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="title" value="{{ $diary_form->title }}">
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-md-2" for="body">内容：</label>
+          <label class="col-md-2" for="body"><span class="badge badge-danger">必須</span>内容：</label>
           <div class="col-md-10">
             <textarea class="form-control" name="body" rows="20">{{ $diary_form->body }}</textarea>
           </div>

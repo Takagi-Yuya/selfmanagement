@@ -15,7 +15,7 @@
           </ul>
         @endif
         <div class="form-group row">
-          <label class="col-md-2" for="name">名前：</label>
+          <label class="col-md-2" for="name"><span class="badge badge-danger">必須</span>名前：</label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="name" value="{{ $profile_form->name }}">
           </div>
@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-md-2" for="introduction">自己紹介：</label>
+          <label class="col-md-2" for="introduction"><span class="badge badge-danger">必須</span>自己紹介：</label>
           <div class="col-md-10">
             <textarea class="form-control" name="introduction" rows="20">{{ $profile_form->introduction }}</textarea>
           </div>

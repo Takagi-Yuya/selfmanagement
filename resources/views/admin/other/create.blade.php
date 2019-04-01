@@ -15,7 +15,7 @@
           </ul>
         @endif
         <div class="form-group row">
-          <label class="col-md-2" for="question">Q.質問：</label>
+          <label class="col-md-2" for="question"><span class="badge badge-danger">必須</span>Q.質問：</label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="question" value="{{ old("question") }}" placeholder="自分への質問を作成して他の人に回答してもらおう">
           </div>
