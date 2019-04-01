@@ -15,8 +15,8 @@
           </ul>
         @endif
         <br>
-        <p>・スキル項目欄には自分の出来る事もしくはこれから習得したいスキルを入力</p>
-        <p>・数値入力欄には1~10の数字を入力</p>
+        <p>※スキル項目欄には自分の出来る事もしくはこれから習得したいスキルを入力</p>
+        <p>※数値入力欄には10段階評価として数字を入力</p>
         <br>
         <div class="form-group row">
           <label class="col-md-6" for="item_a">スキル項目A<span class="badge badge-danger">必須</span></label>
@@ -25,11 +25,37 @@
           </div>
           <label class="col-md-6" for="value_before_a">現在の数値を1~10で設定<span class="badge badge-danger">必須</span></label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_before_a" value="{{ $portfolio_form->value_before_a }}">
+            <select name="value_before_a">
+              <option value="{{ $portfolio_form->value_before_a }}">{{ $portfolio_form->value_before_a }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
           <label class="col-md-6" for="value_after_a">目標とする数値を1~10で設定<span class="badge badge-danger">必須</span></label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_after_a" value="{{ $portfolio_form->value_after_a }}">
+            <select name="value_after_a">
+              <option value="{{ $portfolio_form->value_after_a }}">{{ $portfolio_form->value_after_a }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
         </div>
         <hr>
@@ -40,11 +66,37 @@
           </div>
           <label class="col-md-6" for="value_before_b">現在の数値を1~10で設定<span class="badge badge-danger">必須</span></label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_before_b" value="{{ $portfolio_form->value_before_b }}">
+            <select name="value_before_b">
+              <option value="{{ $portfolio_form->value_before_b }}">{{ $portfolio_form->value_before_b }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
           <label class="col-md-6" for="value_after_b">目標とする数値を1~10で設定<span class="badge badge-danger">必須</span></label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_after_b" value="{{ $portfolio_form->value_after_b }}">
+            <select name="value_after_b">
+              <option value="{{ $portfolio_form->value_after_b }}">{{ $portfolio_form->value_after_b }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
         </div>
         <hr>
@@ -55,11 +107,37 @@
           </div>
           <label class="col-md-6" for="value_before_c">現在の数値を1~10で設定<span class="badge badge-danger">必須</span></label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_before_c" value="{{ $portfolio_form->value_before_c }}">
+            <select name="value_before_c">
+              <option value="{{ $portfolio_form->value_before_c }}">{{ $portfolio_form->value_before_c }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
           <label class="col-md-6" for="value_after_c">目標とする数値を1~10で設定<span class="badge badge-danger">必須</span></label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_after_c" value="{{ $portfolio_form->value_after_c }}">
+            <select name="value_after_c">
+              <option value="{{ $portfolio_form->value_after_c }}">{{ $portfolio_form->value_after_c }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
         </div>
         <hr>
@@ -70,11 +148,37 @@
           </div>
           <label class="col-md-6" for="value_before_d">現在の数値を1~10で設定</label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_before_d" value="{{ $portfolio_form->value_before_d }}">
+            <select name="value_before_d">
+              <option value="{{ $portfolio_form->value_before_d }}">{{ $portfolio_form->value_before_d }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
           <label class="col-md-6" for="value_after_d">目標とする数値を1~10で設定</label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_after_d" value="{{ $portfolio_form->value_after_d }}">
+            <select name="value_after_d">
+              <option value="{{ $portfolio_form->value_after_d }}">{{ $portfolio_form->value_after_d }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
         </div>
         <hr>
@@ -85,11 +189,37 @@
           </div>
           <label class="col-md-6" for="value_before_e">現在の数値を1~10で設定</label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_before_e" value="{{ $portfolio_form->value_before_e }}">
+            <select name="value_before_e">
+              <option value="{{ $portfolio_form->value_before_e }}">{{ $portfolio_form->value_before_e }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
           <label class="col-md-6" for="value_after_e">目標とする数値を1~10で設定</label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_after_e" value="{{ $portfolio_form->value_after_e }}">
+            <select name="value_after_e">
+              <option value="{{ $portfolio_form->value_after_e }}">{{ $portfolio_form->value_after_e }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
         </div>
         <hr>
@@ -100,11 +230,37 @@
           </div>
           <label class="col-md-6" for="value_before_f">現在の数値を1~10で設定</label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_before_f" value="{{ $portfolio_form->value_before_f }}">
+            <select name="value_before_f">
+              <option value="{{ $portfolio_form->value_before_f }}">{{ $portfolio_form->value_before_f }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
           <label class="col-md-6" for="value_after_f">目標とする数値を1~10で設定</label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_after_f" value="{{ $portfolio_form->value_after_f }}">
+            <select name="value_after_f">
+              <option value="{{ $portfolio_form->value_after_f }}">{{ $portfolio_form->value_after_f }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
         </div>
         <hr>
@@ -115,11 +271,37 @@
           </div>
           <label class="col-md-6" for="value_before_g">現在の数値を1~10で設定</label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_before_g" value="{{ $portfolio_form->value_before_g }}">
+            <select name="value_before_g">
+              <option value="{{ $portfolio_form->value_before_g }}">{{ $portfolio_form->value_before_g }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
           <label class="col-md-6" for="value_after_g">目標とする数値を1~10で設定</label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_after_g" value="{{ $portfolio_form->value_after_g }}">
+            <select name="value_after_g">
+              <option value="{{ $portfolio_form->value_after_g }}">{{ $portfolio_form->value_after_g }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
         </div>
         <hr>
@@ -130,11 +312,37 @@
           </div>
           <label class="col-md-6" for="value_before_h">現在の数値を1~10で設定</label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_before_h" value="{{ $portfolio_form->value_before_h }}">
+            <select name="value_before_h">
+              <option value="{{ $portfolio_form->value_before_h }}">{{ $portfolio_form->value_before_h }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
           <label class="col-md-6" for="value_after_h">目標とする数値を1~10で設定</label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_after_h" value="{{ $portfolio_form->value_after_h }}">
+            <select name="value_after_h">
+              <option value="{{ $portfolio_form->value_after_h }}">{{ $portfolio_form->value_after_h }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
         </div>
         <hr>
@@ -145,11 +353,37 @@
           </div>
           <label class="col-md-6" for="value_before_i">現在の数値を1~10で設定</label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_before_i" value="{{ $portfolio_form->value_before_i }}">
+            <select name="value_before_i">
+              <option value="{{ $portfolio_form->value_before_i }}">{{ $portfolio_form->value_before_i }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
           <label class="col-md-6" for="value_after_i">目標とする数値を1~10で設定</label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_after_i" value="{{ $portfolio_form->value_after_i }}">
+            <select name="value_after_i">
+              <option value="{{ $portfolio_form->value_after_i }}">{{ $portfolio_form->value_after_i }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
         </div>
         <hr>
@@ -160,11 +394,37 @@
           </div>
           <label class="col-md-6" for="value_before_j">現在の数値を1~10で設定</label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_before_j" value="{{ $portfolio_form->value_before_j }}">
+            <select name="value_before_j">
+              <option value="{{ $portfolio_form->value_before_j }}">{{ $portfolio_form->value_before_j }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
           <label class="col-md-6" for="value_after_j">目標とする数値を1~10で設定</label>
           <div class="col-md-10">
-            <input class="form-control" type="number" name="value_after_j" value="{{ $portfolio_form->value_after_j }}">
+            <select name="value_after_j">
+              <option value="{{ $portfolio_form->value_after_j }}">{{ $portfolio_form->value_after_j }}</option>
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+              <option value=9>9</option>
+              <option value=10>10</option>
+            </select>
           </div>
         </div>
         <hr>

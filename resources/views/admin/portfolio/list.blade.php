@@ -7,7 +7,10 @@
       <h2>portfolio list</h2>
       <br>
       @if ($portfolio != null)
-        <canvas id="nowChart"></canvas>
+        <p>スキルアップ出来たと感じたらポートフォリオを更新しよう！</p>
+        <p>新たな目標が出来たらポートフォリオに項目を追加しよう！</p>
+        <br>
+        <canvas id="nowChart" height="250"></canvas>
         <script>
           var ctx = document.getElementById("nowChart").getContext("2d");
           var myBar = new Chart(ctx, {
@@ -35,7 +38,7 @@
                           scaleLabel: {              //軸ラベル設定
                              display: true,          //表示設定
                              labelString: '10ステップ',  //ラベル
-                             fontSize: 18               //フォントサイズ
+                             fontSize: 15               //フォントサイズ
                           },
                           ticks: {                      //最大値最小値設定
                               min: 0,                   //最小値
@@ -58,7 +61,7 @@
                   },
                   layout: {                             //レイアウト
                       padding: {                          //余白設定
-                          left: 100,
+                          left: 50,
                           right: 50,
                           top: 0,
                           bottom: 0
@@ -70,7 +73,7 @@
         <br>
         <hr>
         <br>
-        <canvas id="futureChart"></canvas>
+        <canvas id="futureChart" height="250"></canvas>
         <script>
         var ctx = document.getElementById("futureChart").getContext("2d");
         var myBar = new Chart(ctx, {
@@ -98,7 +101,7 @@
                         scaleLabel: {              //軸ラベル設定
                            display: true,          //表示設定
                            labelString: '10ステップ',  //ラベル
-                           fontSize: 18               //フォントサイズ
+                           fontSize: 15               //フォントサイズ
                         },
                         ticks: {                      //最大値最小値設定
                             min: 0,                   //最小値
@@ -121,7 +124,7 @@
                 },
                 layout: {                             //レイアウト
                     padding: {                          //余白設定
-                        left: 100,
+                        left: 50,
                         right: 50,
                         top: 0,
                         bottom: 0
