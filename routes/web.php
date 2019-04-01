@@ -43,7 +43,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('analysis/edit', 'Admin\AnalysisController@edit');
     Route::post('analysis/edit','Admin\AnalysisController@update');
     Route::get('analysis/delete', 'Admin\AnalysisController@delete');
-    Route::get('portfolio/list', 'Admin\PortfolioController@list');
     Route::get('other/list', 'Admin\OtherQuestionController@list');
     Route::get('other/create', 'Admin\OtherQuestionController@add');
     Route::post('other/create', 'Admin\OtherQuestionController@create');
@@ -57,4 +56,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('timeline/edit', 'Admin\OtherAnswerController@edit');
     Route::post('timeline/edit', 'Admin\OtherAnswerController@update');
     Route::get('timeline/delete', 'Admin\OtherAnswerController@delete');
+    Route::get('portfolio/list', 'Admin\PortfolioController@list');
+    Route::get('portfolio/create', 'Admin\PortfolioController@add')
 });
