@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 mx-auto">
-      <h2>portfolio edit</h2>
+      <h2>ポートフォリオ/編集</h2>
       <br>
       <form action="{{ action("Admin\PortfolioController@update") }}" method="post" enctype="multipart/form-data">
         @if (count($errors) > 0)

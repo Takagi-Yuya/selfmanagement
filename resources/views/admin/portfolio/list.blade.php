@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-10 mx-auto">
-      <h2>portfolio list</h2>
+      <h2>ポートフォリオ/現在・未来</h2>
       <br>
       @if ($portfolio != null)
         <p><i class="far fa-check-circle"></i>スキルアップ出来たと感じたらポートフォリオを更新しよう！</p>
