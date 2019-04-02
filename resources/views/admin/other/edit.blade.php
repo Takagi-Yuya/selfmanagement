@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 mx-auto">
-      <h2>other edit</h2>
+      <h2>他己分析/編集</h2>
       <br>
       <form action="{{ action("Admin\OtherQuestionController@update") }}" method="post" enctype="multipart/form-data">
         @if (count($errors) > 0)

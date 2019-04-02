@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 mx-auto">
-      <h2>other list</h2>
+      <h2>他己分析/一覧</h2>
       <br>
         @if (count($questions) > 0)
           @foreach ($questions as $question)
