@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 mx-auto">
-      <h2>timeline answer create</h2>
+      <h2>他己分析回答/新規作成</h2>
       <br>
       <div class="row">
         <div class="col-md-12">

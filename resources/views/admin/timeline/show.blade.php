@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 mx-auto">
-      <h2>timeline details</h2>
+      <h2>他己分析タイムライン/詳細</h2>
       <br>
         <div class="card mb-4">
           <div class="card-header">
