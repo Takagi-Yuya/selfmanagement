@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 mx-auto">
-      <h2>your profile</h2>
+      <h2>プロフィール</h2>
       <br>
       @if ($profile != null)
         <div class="image col-md-8 mx-auto">
