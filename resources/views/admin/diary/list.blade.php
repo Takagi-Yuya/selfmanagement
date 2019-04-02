@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 mx-auto">
-      <h2>diary list</h2>
+      <h2>日記一覧</h2>
       <br>
         @if (count($diaries) > 0)
           @foreach ($diaries as $diary)
