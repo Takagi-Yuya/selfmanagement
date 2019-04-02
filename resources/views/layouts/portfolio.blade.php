@@ -23,19 +23,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 
-    <!--とりあえずここに書いてるだけ-->
-    <style>
-    .image-mini {
-      width: 32px;
-      height: 32px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-    .navbar {
-      background-color: #0099CC;
-    }
-    </style>
-
 </head>
 <body>
     <div id="app">

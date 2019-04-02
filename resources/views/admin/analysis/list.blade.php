@@ -8,7 +8,7 @@
       <br>
         @if (count($analyses) > 0)
           @foreach ($analyses as $analysis)
-            <div class="row border border-secondary p-4 mb-4">
+            <div class="row box p-4 mb-4">
               <div class="col-md-12">
                 <p><small>{{ $analysis->updated_at->format('Y年m月d日') }}</small></p>
                 <p><b>Q.質問：{{ $analysis->question }}</b></p>

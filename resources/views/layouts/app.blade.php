@@ -22,31 +22,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 
-    <!--とりあえずここに書いてるだけ-->
-    <style>
-    .image-mini {
-      width: 32px;
-      height: 32px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-    .image-profile {
-      width: 500px;
-      height: 500px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-    .image-diary {
-      width: 600px;
-      height: 500px;
-      object-fit: cover;
-      border-radius: 10%;
-    }
-    .navbar {
-      background-color: #0099CC;
-    }
-    </style>
-
 </head>
 <body>
     <div id="app">
