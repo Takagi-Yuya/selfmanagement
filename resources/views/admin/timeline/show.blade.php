@@ -30,15 +30,23 @@
           <div class="card-body">
             @if (count($answers) > 0)
               @foreach ($answers as $answer)
-                @if ($answer->profile == null)
+              <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $answer->user_id])}}">
+              @if ($answer->profile == null)
+                <p class="image">
+                  <img src="{{asset('images/noprofileimage.jpg')}}" alt="" class="image-mini mr-2">{{ $answer->user->name }}
+                </p>
+              @else
+                @if ($answer->profile['image_path'] == null)
                   <p class="image">
-                    <img src="{{asset('images/noprofileimage.jpg')}}" alt="" class="image-mini mr-2">{{ $answer->user->name }}
+                    <img src="{{asset('images/noprofileimage.jpg')}}" alt="" class="image-mini mr-2">{{ $answer->profile->name }}
                   </p>
                 @else
                   <p class="image">
                     <img src="{{ asset('storage/image/' . $answer->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $answer->profile->name }}
                   </p>
                 @endif
+              @endif
+              </a>
                 <p>A.回答：{{ $answer->answer }}</p>
                 <p>なぜ？：{{ $answer->reason }}</p>
                 <div class="col-md-11 text-right">

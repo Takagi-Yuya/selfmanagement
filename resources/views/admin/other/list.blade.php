@@ -15,21 +15,30 @@
                 <hr size="3" color="gray">
                 @if (count($question->other_answers) > 0)
                   @foreach ($question->other_answers as $other_answer)
+                    <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $other_answer->user_id])}}">
                     @if ($other_answer->profile == null)
-                    <p class="image">
-                      <img src="{{asset('images/noprofileimage.jpg')}}" alt="" class="image-mini mr-2">{{ $other_answer->user->name }}さんの回答
-                    </p>
-                  @else
-                    <p class="image">
-                      <img src="{{ asset('storage/image/' . $other_answer->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $other_answer->profile->name }}さんの回答
-                    </p>
+                      <p class="image">
+                        <img src="{{asset('images/noprofileimage.jpg')}}" alt="" class="image-mini mr-2">{{ $other_answer->user->name }}
+                      </p>
+                    @else
+                      @if ($other_answer->profile['image_path'] == null)
+                        <p class="image">
+                          <img src="{{asset('images/noprofileimage.jpg')}}" alt="" class="image-mini mr-2">{{ $other_answer->profile->name }}
+                        </p>
+                      @else
+                        <p class="image">
+                          <img src="{{ asset('storage/image/' . $other_answer->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $other_answer->profile->name }}
+                        </p>
+                      @endif
                     @endif
+                    </a>
                     <p>A.回答：{{ $other_answer->answer }}</p>
                     <p>なぜ？：{{ $other_answer->reason }}</p>
                     <hr size="3" color="gray">
                   @endforeach
                 @else
                   <p>※まだ回答はありません。</p>
+                  <p>※回答が無い間は編集可能です。</p>
                 @endif
                   <div class="col-md-11 text-right">
                     @if (count($question->other_answers) > 0)
