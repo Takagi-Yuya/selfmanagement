@@ -17,8 +17,5 @@ class OtherUserProfileController extends Controller
         $other_profile = Profile::where('user_id', $other_user->id)->first();
 
         return view('admin.other_user_profile.show', ['other_profile' => $other_profile]);
-
-        //$users = User::where('id', '!=', auth()->user()->id)->get();
-        //return view('users.index', ['users' => $users]);
     }
 }

@@ -59,4 +59,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth' ,'middleware' => 'veri
     Route::get('portfolio/edit', 'Admin\PortfolioController@edit');
     Route::post('portfolio/edit', 'Admin\PortfolioController@update');
     Route::get('other_user_profile/show', 'Admin\OtherUserProfileController@show');
+    Route::post('other_user_profile/show/{user}/follow', 'Admin\OtherUserProfileController@follow')->name('follow1');
+    Route::delete('other_user_profile/show/{user}/unfollow', 'Admin\OtherUserProfileController@unfollow')->name('unfollow1');
+    Route::post('profile/list/{user}/follow', 'Admin\OtherUserProfileController@follow')->name('follow2');
+    Route::delete('profile/list/{user}/unfollow', 'Admin\OtherUserProfileController@unfollow')->name('unfollow2');
 });
