@@ -9,7 +9,11 @@
         @foreach ($questions as $question)
           <div class="card mb-4">
             <div class="card-header">
-              <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $question->user_id])}}">
+              @if ($question->user_id == $user->id)
+                <a href="{{ action('Admin\ProfileController@list', ['id' => $question->user_id])}}">
+              @else
+                <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $question->user_id])}}">
+              @endif
               @if ($question->profile == null)
                 <p class="image">
                   <img src="{{asset('images/noprofileimage.jpg')}}" alt="" class="image-mini mr-2">{{ $question->user->name }}

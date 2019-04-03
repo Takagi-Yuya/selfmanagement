@@ -22,8 +22,9 @@ class OtherQuestionController extends Controller
     public function index()
     {
         $questions = OtherQuestion::with(['other_answers', 'profile'])->orderBy('created_at', 'desc')->paginate(10);
+        $user = Auth::user();
 
-        return view('admin.timeline.index', ['questions' => $questions]);
+        return view('admin.timeline.index', ['questions' => $questions, 'user' => $user]);
     }
 
     public function add()
