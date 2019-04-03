@@ -39,6 +39,25 @@
     <div class="row">
       <div class="col-md-10 text-left mx-auto box">
       @foreach ($users as $user)
+
+@if (auth()->user()->isFollowing($user->id))
+        <form action="{{action('Admin\OtherUserProfileController@unfollow', ['id' => $user->id])}}" method="POST">
+            {{ csrf_field() }}
+
+            <button type="submit" id="delete-follow-{{ $user->id }}" class="btn btn-danger">
+                <i class="fa fa-btn fa-trash"></i>Unfollow
+            </button>
+        </form>
+@else
+        <form action="{{action('Admin\OtherUserProfileController@follow', ['id' => $user->id])}}" method="POST">
+            {{ csrf_field() }}
+
+            <button type="submit" id="follow-user-{{ $user->id }}" class="btn btn-success">
+                <i class="fa fa-btn fa-user"></i>Follow
+            </button>
+        </form>
+@endif
+
         @if ($user->profile != null)
           @if ($user->profile->image_path != null)
             <img src="{{ asset('storage/image/' . $user->profile->image_path) }}" alt="" class="image-mini">

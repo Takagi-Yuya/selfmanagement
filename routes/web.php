@@ -61,7 +61,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth' ,'middleware' => 'veri
     Route::get('other_user_profile/show', 'Admin\OtherUserProfileController@show');
     //フォロー機能関係
     Route::post('other_user_profile/show/{user}/follow', 'Admin\OtherUserProfileController@follow');
-    Route::delete('other_user_profile/show/{user}/unfollow', 'Admin\OtherUserProfileController@unfollow');
+    Route::post('other_user_profile/show/{user}/unfollow', 'Admin\OtherUserProfileController@unfollow');
     Route::post('profile/list/{user}/follow', 'Admin\OtherUserProfileController@follow');
-    Route::delete('profile/list/{user}/unfollow', 'Admin\OtherUserProfileController@unfollow');
+    Route::post('profile/list/{user}/unfollow', 'Admin\OtherUserProfileController@unfollow');
 });

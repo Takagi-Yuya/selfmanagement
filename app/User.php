@@ -103,6 +103,6 @@ class User extends Authenticatable implements MustVerifyEmail
 //フォロー中かどうかを返す
     public function isFollowing($userId)
     {
-        return (boolean) $this->follows()->where('follows_id', $userId)->first(['id']);
+        return (boolean) $this->follows()->where('follows_id', $userId)->first();
     }
 }
