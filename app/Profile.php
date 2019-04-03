@@ -15,6 +15,11 @@ class Profile extends Model
       'introduction' => 'required'
     );
 
+    Public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
     public function other_questions()
     {
         return $this->hasMany('App\OtherQuestion', 'user_id');

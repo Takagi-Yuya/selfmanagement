@@ -48,6 +48,11 @@ class User extends Authenticatable implements MustVerifyEmail
         $this->notify(new \App\Notifications\VerifyEmailJapanese);
     }
 
+    Public function profile()
+    {
+      return $this->hasOne('App\Profile');
+    }
+
     public function diaries()
     {
         return $this->hasMany('App\Diary');

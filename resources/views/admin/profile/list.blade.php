@@ -34,6 +34,26 @@
           @endif
         </div>
       </div>
+
+<!--follow check...-->
+    <div class="row">
+      <div class="col-md-10 text-left mx-auto box">
+      @foreach ($users as $user)
+        @if ($user->profile != null)
+          @if ($user->profile->image_path != null)
+            <img src="{{ asset('storage/image/' . $user->profile->image_path) }}" alt="" class="image-mini">
+          @else
+            <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini">
+          @endif
+          <p>{{ $user->profile->name }}</p>
+        @else
+          <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini">
+          <p>{{ $user->name }}</p>
+        @endif
+      @endforeach
+      </div>
+    </div>
+
     </div>
   </div>
 </div>

@@ -14,8 +14,9 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
         $profile = Profile::find($user->id);
+        $users = User::where('id', '!=', $user->id)->get();
 
-        return view('admin.profile.list', ['profile' => $profile]);
+        return view('admin.profile.list', ['profile' => $profile, 'users' => $users]);
     }
 
     public function add()
