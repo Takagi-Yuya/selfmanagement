@@ -9,7 +9,7 @@
       <div class="card mb-4">
         <div class="card-header">
           @if ($question->user_id == $user->id)
-            <a href="{{ action('Admin\ProfileController@list', ['id' => $question->user_id])}}">
+            <a href="{{ action('Admin\ProfileController@list')}}">
           @else
             <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $question->user_id])}}">
           @endif
@@ -35,7 +35,7 @@
           @if (count($answers) > 0)
             @foreach ($answers as $answer)
               @if ($answer->user_id == $user->id)
-                <a href="{{ action('Admin\ProfileController@list', ['id' => $answer->user_id])}}">
+                <a href="{{ action('Admin\ProfileController@list')}}">
               @else
                 <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $answer->user_id])}}">
               @endif

@@ -10,7 +10,7 @@
         <div class="card mb-4">
           <div class="card-header">
             @if ($question->user_id == $user->id)
-              <a href="{{ action('Admin\ProfileController@list', ['id' => $question->user_id])}}">
+              <a href="{{ action('Admin\ProfileController@list') }}">
             @else
               <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $question->user_id])}}">
             @endif

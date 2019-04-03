@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Profile;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
@@ -13,8 +14,9 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
         $profile = Profile::find($user->id);
+        $users = User::where('id', '!=', auth()->user()->id)->get();
 
-        return view('admin.profile.list', ['profile' => $profile]);
+        return view('admin.profile.list', ['profile' => $profile, 'users' => $users]);
     }
 
     public function add()
