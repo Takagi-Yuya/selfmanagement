@@ -68,4 +68,36 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany('App\OtherQuestion');
     }
 
+//＿多対多のリレーション
+//フォロワーを取得
+    public function followers()
+    {
+        return $this->belongsToMany(self::class, 'followers', 'follows_id', 'user_id')
+                    ->withTimestamps();
+    }
+//自分がフォローしているユーザーを取得
+    public function follows()
+    {
+        return $this->belongsToMany(self::class, 'followers', 'user_id', 'follows_id')
+                    ->withTimestamps();
+    }
+
+//＿ヘルパ関数
+//フォローする
+    public function follow($userId)
+    {
+        $this->follows()->attach($userId);
+        return $this;
+    }
+//アンフォローする
+    public function unfollow($userId)
+    {
+        $this->follows()->detach($userId);
+        return $this;
+    }
+//フォロー中かどうかを返す
+    public function isFollowing($userId)
+    {
+        return (boolean) $this->follows()->where('follows_id', $userId)->first(['id']);
+    }
 }
