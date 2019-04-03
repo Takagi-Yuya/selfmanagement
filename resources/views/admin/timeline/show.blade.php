@@ -60,11 +60,13 @@
             @else
               <p>※まだ回答はありません。</p>
             @endif
+            @if ($question->user_id != $user->id)
             <div class="row">
               <div class="col-md-11 text-right">
                 <a href="{{ action('Admin\OtherAnswerController@add', ['id' => $question->id]) }}" role='button' class='btn btn-success'>新規作成</a>
               </div>
             </div>
+            @endif
           </div>
           <div class="card-footer">
             <span class="mr-4">
