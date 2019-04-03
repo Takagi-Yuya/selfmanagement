@@ -10,6 +10,8 @@
         <div class="image col-md-8 mx-auto">
           @if ($profile->image_path != null)
             <img src="{{ asset('storage/image/' . $profile->image_path) }}" alt="" class="image-profile">
+          @else
+            <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-profile">
           @endif
         </div>
         <br>

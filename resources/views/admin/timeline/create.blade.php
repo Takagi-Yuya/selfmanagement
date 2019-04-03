@@ -8,15 +8,23 @@
       <br>
       <div class="row">
         <div class="col-md-12">
+          <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $question->user_id])}}">
           @if ($question->profile == null)
             <p class="image">
-              <img src="{{asset('images/noprofileimage.jpg')}}" alt="" class="image-mini mr-2">{{ $question->user->name }}さんの質門
+              <img src="{{asset('images/noprofileimage.jpg')}}" alt="" class="image-mini mr-2">{{ $question->user->name }}
             </p>
           @else
-            <p class="image">
-              <img src="{{ asset('storage/image/' . $question->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $question->profile->name }}さんの質問
-            </p>
+            @if ($question->profile['image_path'] == null)
+              <p class="image">
+                <img src="{{asset('images/noprofileimage.jpg')}}" alt="" class="image-mini mr-2">{{ $question->profile->name }}
+              </p>
+            @else
+              <p class="image">
+                <img src="{{ asset('storage/image/' . $question->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $question->profile->name }}
+              </p>
+            @endif
           @endif
+          </a>
           <p><b>Q.質問：{{ $question->question }}</b></p>
           <hr size="3" color="gray">
         </div>

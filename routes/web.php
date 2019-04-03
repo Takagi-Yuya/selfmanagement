@@ -17,10 +17,10 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 
-
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/about', 'HomeController@about');
-
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/about', 'HomeController@about');
+});
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth' ,'middleware' => 'verified'], function() {
     Route::get('profile/list', 'Admin\ProfileController@list');
@@ -58,4 +58,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth' ,'middleware' => 'veri
     Route::post('portfolio/create', 'Admin\PortfolioController@create');
     Route::get('portfolio/edit', 'Admin\PortfolioController@edit');
     Route::post('portfolio/edit', 'Admin\PortfolioController@update');
+    Route::get('other_user_profile/show', 'Admin\OtherUserProfileController@show');
 });
