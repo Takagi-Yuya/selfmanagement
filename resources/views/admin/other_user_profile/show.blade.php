@@ -6,7 +6,7 @@
     <div class="col-md-8 mx-auto">
       <h2>プロフィール</h2>
       <br>
-      <div class="row">
+      <div class="row box p-5">
         <div class="image col-md-8 mx-auto">
           @if ($profile != null)
             @if ($profile->image_path != null)
@@ -20,8 +20,6 @@
             </div>
           @endif
         </div>
-      </div>
-      <div class="row">
         <div class="col-md-8 mx-auto mt-3">
         @if (auth()->user()->isFollowing($user->id))
           <form action="{{action('Admin\OtherUserProfileController@unfollow', ['id' => $user->id])}}" method="POST">
@@ -39,8 +37,6 @@
           </form>
         @endif
         </div>
-      </div>
-      <div class="row">
         <div class="col-md-8 mx-auto">
           @if ($profile != null)
             <br>
