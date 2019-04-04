@@ -44,9 +44,10 @@
   </div>
   <div class="row">
     <div class="col-md-6 mx-auto box">
-      <p><i class="fa fa-btn fa-user-friends"></i>フォロー中</p>
+      <p><i class="fa fa-btn fa-user-check"></i> フォロー</p><hr>
       @foreach ($users as $user)
         @if (auth()->user()->isFollowing($user->id))
+        <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $user->id])}}">
           <form action="{{action('Admin\OtherUserProfileController@unfollow', ['id' => $user->id])}}" method="POST">
             {{ csrf_field() }}
           @if ($user->profile != null)
@@ -74,12 +75,36 @@
             </li>
           @endif
           </form>
+        </a>
         @endif
       @endforeach
     </div>
   </div>
-  <div class="d-flex justify-content-center">
-    {{ $users->links() }}
+  <div class="row">
+    <div class="col-md-6 mx-auto box">
+      <p><i class="fa fa-btn fa-user-friends"></i> フォロワー</p><hr>
+      @foreach ($users as $user)
+        @if ($user->isFollowing($auth_user->id))
+          <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $user->id])}}">
+            @if ($user->profile != null)
+              @if ($user->profile->image_path != null)
+                <li class="mb-2">
+                  <img src="{{ asset('storage/image/' . $user->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $user->profile->name }}
+                </li>
+              @else
+                <li class="mb-2">
+                  <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $user->profile->name }}
+                </li>
+              @endif
+            @else
+              <li class="mb-2">
+                <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $user->name }}
+              </li>
+            @endif
+          </a>
+        @endif
+      @endforeach
+    </div>
   </div>
 </div>
 @endsection

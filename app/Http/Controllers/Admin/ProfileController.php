@@ -12,11 +12,11 @@ class ProfileController extends Controller
 {
     public function list()
     {
-        $user = Auth::user();
-        $profile = Profile::find($user->id);
-        $users = User::where('id', '!=', $user->id)->paginate(10);
+        $auth_user = Auth::user();
+        $profile = Profile::find($auth_user->id);
+        $users = User::where('id', '!=', $auth_user->id)->get();
 
-        return view('admin.profile.list', ['profile' => $profile, 'users' => $users]);
+        return view('admin.profile.list', ['profile' => $profile, 'users' => $users, 'auth_user' => $auth_user]);
     }
 
     public function add()
