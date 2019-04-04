@@ -6,25 +6,61 @@
     <div class="col-md-8 mx-auto">
       <h2>プロフィール</h2>
       <br>
-      @if ($other_profile != null)
+      <div class="row">
         <div class="image col-md-8 mx-auto">
-          @if ($other_profile->image_path != null)
-            <img src="{{ asset('storage/image/' . $other_profile->image_path) }}" alt="" class="image-profile">
+          @if ($other_profile != null)
+            @if ($other_profile->image_path != null)
+              <img src="{{ asset('storage/image/' . $other_profile->image_path) }}" alt="" class="image-profile mx-auto">
+            @else
+              <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-profile mx-auto">
+            @endif
           @else
-            <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-profile">
+            <div class="image col-md-8 mx-auto">
+              <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-profile mx-auto">
+            </div>
           @endif
         </div>
-        <br>
-        <hr size="3" color="gray">
-        <p>名前：{{ $other_profile->name }}</p>
-        <hr size="3" color="gray">
-        <p>目標：{{ $other_profile->goal }}</p>
-        <hr size="3" color="gray">
-        <p>自己紹介：{{ $other_profile->introduction }}</p>
-        <hr size="3" color="gray">
-      @else
-        <p>まだプロフィールはありません。</p>
-      @endif
+      </div>
+      <div class="row">
+        <div class="col-md-8 mx-auto mt-3">
+        @if (auth()->user()->isFollowing($user->id))
+          <form action="{{action('Admin\OtherUserProfileController@unfollow', ['id' => $user->id])}}" method="POST">
+            {{ csrf_field() }}
+            <button type="submit" id="delete-follow-{{ $user->id }}" class="btn btn-danger ml-2">
+              <i class="fa fa-btn fa-trash"></i>Unfollow
+            </button>
+          </form>
+        @else
+          <form action="{{action('Admin\OtherUserProfileController@follow', ['id' => $user->id])}}" method="POST">
+              {{ csrf_field() }}
+            <button type="submit" id="follow-user-{{ $user->id }}" class="btn btn-success">
+              <i class="fa fa-btn fa-user-plus"></i>Follow
+            </button>
+          </form>
+        @endif
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          @if ($other_profile != null)
+            <br>
+            <hr size="3" color="gray">
+            <p>名前：{{ $other_profile->name }}</p>
+            <hr size="3" color="gray">
+            <p>目標：{{ $other_profile->goal }}</p>
+            <hr size="3" color="gray">
+            <p>自己紹介：{{ $other_profile->introduction }}</p>
+            <hr size="3" color="gray">
+          @else
+            <br>
+            <hr size="3" color="gray">
+            <p>名前：{{ $user->name }}</p>
+            <hr size="3" color="gray">
+            <p>※詳細プロフィールの設定はまだありません。</p>
+            <hr size="3" color="gray">
+          @endif
+        </div>
+      </div>
     </div>
   </div>
 </div>

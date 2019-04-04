@@ -14,7 +14,7 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
         $profile = Profile::find($user->id);
-        $users = User::where('id', '!=', $user->id)->get();
+        $users = User::where('id', '!=', $user->id)->paginate(10);
 
         return view('admin.profile.list', ['profile' => $profile, 'users' => $users]);
     }

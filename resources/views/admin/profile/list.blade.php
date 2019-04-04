@@ -7,26 +7,32 @@
       <h2>プロフィール</h2>
       <br>
       @if ($profile != null)
-        <div class="image col-md-8 mx-auto">
-          @if ($profile->image_path != null)
-            <img src="{{ asset('storage/image/' . $profile->image_path) }}" alt="" class="image-profile mx-auto">
-          @else
-            <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-profile mx-auto">
-          @endif
+        <div class="row">
+          <div class="image col-md-8 mx-auto">
+            @if ($profile->image_path != null)
+              <img src="{{ asset('storage/image/' . $profile->image_path) }}" alt="" class="image-profile mx-auto">
+            @else
+              <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-profile mx-auto">
+            @endif
+          </div>
         </div>
-        <br>
-        <hr size="3" color="gray">
-        <p>名前：{{ $profile->name }}</p>
-        <hr size="3" color="gray">
-        <p>目標：{{ $profile->goal }}</p>
-        <hr size="3" color="gray">
-        <p>自己紹介：{{ $profile->introduction }}</p>
-        <hr size="3" color="gray">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <br>
+            <hr size="3" color="gray">
+            <p>名前：{{ $profile->name }}</p>
+            <hr size="3" color="gray">
+            <p>目標：{{ $profile->goal }}</p>
+            <hr size="3" color="gray">
+            <p>自己紹介：{{ $profile->introduction }}</p>
+            <hr size="3" color="gray">
+          </div>
+        </div>
       @else
         <p>プロフィールを作成しよう！</p>
       @endif
       <div class="row">
-        <div class="col-md-10 text-right">
+        <div class="col-md-8 mx-auto text-right">
           @if ($profile == null)
             <a href="{{ action('Admin\ProfileController@add') }}" role='button' class='btn btn-success'>新規作成</a>
           @else
@@ -34,46 +40,46 @@
           @endif
         </div>
       </div>
-
-<!--follow check...-->
-    <div class="row">
-      <div class="col-md-10 text-left mx-auto box">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mx-auto box">
+      <p><i class="fa fa-btn fa-user-friends"></i>フォロー中</p>
       @foreach ($users as $user)
-
-@if (auth()->user()->isFollowing($user->id))
-        <form action="{{action('Admin\OtherUserProfileController@unfollow', ['id' => $user->id])}}" method="POST">
+        @if (auth()->user()->isFollowing($user->id))
+          <form action="{{action('Admin\OtherUserProfileController@unfollow', ['id' => $user->id])}}" method="POST">
             {{ csrf_field() }}
-
-            <button type="submit" id="delete-follow-{{ $user->id }}" class="btn btn-danger">
-                <i class="fa fa-btn fa-trash"></i>Unfollow
-            </button>
-        </form>
-@else
-        <form action="{{action('Admin\OtherUserProfileController@follow', ['id' => $user->id])}}" method="POST">
-            {{ csrf_field() }}
-
-            <button type="submit" id="follow-user-{{ $user->id }}" class="btn btn-success">
-                <i class="fa fa-btn fa-user"></i>Follow
-            </button>
-        </form>
-@endif
-
-        @if ($user->profile != null)
-          @if ($user->profile->image_path != null)
-            <img src="{{ asset('storage/image/' . $user->profile->image_path) }}" alt="" class="image-mini">
+          @if ($user->profile != null)
+            @if ($user->profile->image_path != null)
+              <li class="mb-2">
+                <img src="{{ asset('storage/image/' . $user->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $user->profile->name }}
+                <button type="submit" id="delete-follow-{{ $user->id }}" class="btn btn-danger ml-2">
+                  <i class="fa fa-btn fa-trash"></i>Unfollow
+                </button>
+              </li>
+            @else
+              <li class="mb-2">
+                <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $user->profile->name }}
+                <button type="submit" id="delete-follow-{{ $user->id }}" class="btn btn-danger ml-2">
+                  <i class="fa fa-btn fa-trash"></i>Unfollow
+                </button>
+              </li>
+            @endif
           @else
-            <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini">
+            <li class="mb-2">
+              <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $user->name }}
+              <button type="submit" id="delete-follow-{{ $user->id }}" class="btn btn-danger ml-2">
+                <i class="fa fa-btn fa-trash"></i>Unfollow
+              </button>
+            </li>
           @endif
-          <p>{{ $user->profile->name }}</p>
-        @else
-          <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini">
-          <p>{{ $user->name }}</p>
+          </form>
         @endif
       @endforeach
-      </div>
     </div>
-
-    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    {{ $users->links() }}
   </div>
 </div>
 @endsection
