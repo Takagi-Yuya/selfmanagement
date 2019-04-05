@@ -5,7 +5,16 @@
   <div class="row">
     <div class="col-md-8 mx-auto">
       <h2>他己分析タイムライン</h2>
-      <br>
+        <div class="row">
+          <div class="col-md-3 mt-2 mb-2">
+            <form action="{{ action('Admin\SearchController@search') }}" method="get" class="form-inline">
+              <div class="form-group">
+                <input type="text" name="keyword" placeholder="入力">
+                <input type="submit" value="検索" >
+              </div>
+            </form>
+          </div>
+        </div>
       @foreach ($questions as $question)
         <div class="card mb-4">
           <div class="card-header">
@@ -57,7 +66,7 @@
     </div>
   </div>
   <div class="d-flex justify-content-center">
-    {{ $questions->links() }}
+    {{ $questions->appends(Request::all())->links() }}
   </div>
 </div>
 @endsection
