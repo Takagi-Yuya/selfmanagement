@@ -6,10 +6,10 @@
     <div class="col-md-8 mx-auto">
       <h2>他己分析タイムライン</h2>
         <div class="row">
-          <div class="col-md-3 mt-2 mb-2">
+          <div class="col-md-3 mt-5 mb-3">
             <form action="{{ action('Admin\SearchController@search') }}" method="get" class="form-inline">
               <div class="form-group">
-                <input type="text" name="keyword" placeholder="入力">
+                <input type="text" name="keyword" placeholder="キーワードを入力">
                 <input type="submit" value="検索" >
               </div>
             </form>
@@ -53,7 +53,9 @@
             </span>
             @if ($question->other_answers->count() != 0)
               <span>
-                <i class="far fa-comment"></i> {{ $question->other_answers->count() }}
+                <a href="{{ action('Admin\OtherAnswerController@show', ['id' => $question->id]) }}">
+                  <i class="far fa-comment"></i> {{ $question->other_answers->count() }}
+                </a>
               </span>
             @else
             <span>
