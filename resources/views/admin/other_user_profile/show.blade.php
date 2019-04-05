@@ -61,7 +61,7 @@
   </div>
   <div class="row">
     <div class="col-md-4 mx-auto box">
-      <p><i class="fa fa-btn fa-user-check"></i> フォロー</p><hr>
+      <p><i class="fa fa-btn fa-user-check"></i> フォロー {{ $follow_count }}</p><hr>
       @foreach ($other_users as $other_user)
         @if ($user->isFollowing($other_user->id))
           @if ($other_user->id == auth()->user()->id)
@@ -105,7 +105,7 @@
       @endforeach
     </div>
     <div class="col-md-4 mx-auto box">
-      <p><i class="fa fa-btn fa-user-friends"></i> フォロワー</p><hr>
+      <p><i class="fa fa-btn fa-user-friends"></i> フォロワー {{ $follower_count }}</p><hr>
       @foreach ($other_users as $other_user)
         @if ($other_user->isFollowing($user->id))
           @if ($other_user->id == auth()->user()->id)
