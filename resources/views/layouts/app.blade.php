@@ -24,7 +24,7 @@
 
 </head>
 <body>
-    <div class='mb-5' id="app">
+    <div class='mb-3' id="app">
         <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}" >
@@ -108,12 +108,13 @@
                 </div>
             </div>
         </nav>
-        <main class="py-4">
+        <main class="py-4 pt-5">
             @yield('content')
         </main>
     </div>
     <footer>
-        <div class='mt-3' align="center">
+        <div align="center">
+            <hr>
             <p class="copyright">(C) 2019 self management / created by T.Y.</p>
         </div>
     </footer>
