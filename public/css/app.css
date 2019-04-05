@@ -9839,3 +9839,36 @@ h2:after {
   width: 100%;
   border-bottom: solid 3px #0099CC;
 }
+
+#form1 {
+  position: relative;
+  max-width: 300px;
+  margin-bottom: 50px;
+}
+
+#sbox1 {
+  border: 1px #C9C9C9 solid;
+  height: 50px;
+  padding: 0 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  outline: 0;
+  background: #eee;
+  border-radius: 25px;
+}
+
+#sbtn1 {
+  border: none;
+  height: 50px;
+  position: absolute;
+  left: 150px;
+  top: 0;
+  background: none;
+  color: #666;
+  border: none;
+  font-size: 20px;
+}
+#sbtn1:hover {
+  color: #7fbfff;
+}

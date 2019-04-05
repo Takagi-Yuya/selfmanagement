@@ -6,11 +6,11 @@
     <div class="col-md-8 mx-auto">
       <h2>他己分析タイムライン</h2>
         <div class="row">
-          <div class="col-md-3 mt-5 mb-3">
-            <form action="{{ action('Admin\SearchController@search') }}" method="get" class="form-inline">
+          <div class="col-md-8 mt-5 mb-3">
+            <form id="form1" action="{{ action('Admin\SearchController@search') }}" method="get" class="form-inline float-right">
               <div class="form-group">
-                <input type="text" name="keyword" placeholder="キーワードを入力">
-                <input type="submit" value="検索" >
+                <input id="sbox1" type="text" name="keyword" placeholder="キーワードを入力">
+                <button id="sbtn1" type="submit"><i class="fas fa-search"></i></button>
               </div>
             </form>
           </div>
