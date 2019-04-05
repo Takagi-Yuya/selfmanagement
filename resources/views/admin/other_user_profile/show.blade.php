@@ -59,5 +59,97 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-4 mx-auto box">
+      <p><i class="fa fa-btn fa-user-check"></i> フォロー</p><hr>
+      @foreach ($other_users as $other_user)
+        @if ($user->isFollowing($other_user->id))
+          @if ($other_user->id == auth()->user()->id)
+            <a href="{{ action('Admin\ProfileController@list', ['id' => $other_user->id])}}">
+              @if ($other_user->profile != null)
+                @if ($other_user->profile->image_path != null)
+                  <li class="mb-2">
+                    <img src="{{ asset('storage/image/' . $other_user->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $other_user->profile->name }}
+                  </li>
+                @else
+                  <li class="mb-2">
+                    <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $other_user->profile->name }}
+                  </li>
+                @endif
+              @else
+                <li class="mb-2">
+                  <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $other_user->name }}
+                </li>
+              @endif
+            </a>
+          @else
+            <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $other_user->id])}}">
+              @if ($other_user->profile != null)
+                @if ($other_user->profile->image_path != null)
+                  <li class="mb-2">
+                    <img src="{{ asset('storage/image/' . $other_user->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $other_user->profile->name }}
+                  </li>
+                @else
+                  <li class="mb-2">
+                    <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $other_user->profile->name }}
+                  </li>
+                @endif
+              @else
+                <li class="mb-2">
+                  <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $other_user->name }}
+                </li>
+              @endif
+            </a>
+          @endif
+        @endif
+      @endforeach
+    </div>
+
+    <!--ここから続き-->
+    <div class="col-md-4 mx-auto box">
+      <p><i class="fa fa-btn fa-user-friends"></i> フォロワー</p><hr>
+      @foreach ($other_users as $other_user)
+        @if ($other_user->isFollowing($user->id))
+          @if ($other_user->id == auth()->user()->id)
+            <a href="{{ action('Admin\ProfileController@list', ['id' => $other_user->id])}}">
+              @if ($other_user->profile != null)
+                @if ($other_user->profile->image_path != null)
+                  <li class="mb-2">
+                    <img src="{{ asset('storage/image/' . $other_user->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $other_user->profile->name }}
+                  </li>
+                @else
+                  <li class="mb-2">
+                    <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $other_user->profile->name }}
+                  </li>
+                @endif
+              @else
+                <li class="mb-2">
+                  <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $other_user->name }}
+                </li>
+              @endif
+            </a>
+          @else
+            <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $other_user->id])}}">
+              @if ($other_user->profile != null)
+                @if ($other_user->profile->image_path != null)
+                  <li class="mb-2">
+                    <img src="{{ asset('storage/image/' . $other_user->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $other_user->profile->name }}
+                  </li>
+                @else
+                  <li class="mb-2">
+                    <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $other_user->profile->name }}
+                  </li>
+                @endif
+              @else
+                <li class="mb-2">
+                  <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $other_user->name }}
+                </li>
+              @endif
+            </a>
+          @endif
+        @endif
+      @endforeach
+    </div>
+  </div>
 </div>
 @endsection
