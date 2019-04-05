@@ -104,8 +104,6 @@
         @endif
       @endforeach
     </div>
-
-    <!--ここから続き-->
     <div class="col-md-4 mx-auto box">
       <p><i class="fa fa-btn fa-user-friends"></i> フォロワー</p><hr>
       @foreach ($other_users as $other_user)
