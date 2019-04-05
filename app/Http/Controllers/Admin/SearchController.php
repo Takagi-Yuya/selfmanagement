@@ -16,7 +16,12 @@ class SearchController extends Controller
         $keyword = $request->input('keyword');
 
         if (!empty($keyword)) {
-            $questions = OtherQuestion::where('question', 'like', "%$keyword%")->orderBy('created_at', 'desc')->paginate(5);
+            //$questions = OtherQuestion::where('question', 'like', "%$keyword%")->orderBy('created_at', 'desc')->paginate(5);
+
+            $questions = OtherQuestion::whereHas('profile', function ($query) use ($keyword){
+                $query->where('name', 'like','%'.$keyword.'%')->orderBy('created_at', 'desc');
+            })->paginate(5);
+
         } else {
             $questions = OtherQuestion::orderBy('created_at', 'desc')->paginate(5);
         }

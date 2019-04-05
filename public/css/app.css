@@ -9868,6 +9868,7 @@ h2:after {
   color: #666;
   border: none;
   font-size: 20px;
+  outline: 0;
 }
 #sbtn1:hover {
   color: #7fbfff;
