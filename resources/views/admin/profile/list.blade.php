@@ -41,7 +41,7 @@
   </div>
   <div class="row">
     <div class="col-md-4 mx-auto box">
-      <p><i class="fa fa-btn fa-user-check"></i> フォロー</p><hr>
+      <p><i class="fa fa-btn fa-user-check"></i> フォロー {{$follow_count}}</p><hr>
       @foreach ($users as $user)
         @if ($auth_user->isFollowing($user->id))
           <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $user->id])}}">
@@ -65,7 +65,7 @@
       @endforeach
     </div>
     <div class="col-md-4 mx-auto box">
-      <p><i class="fa fa-btn fa-user-friends"></i> フォロワー</p><hr>
+      <p><i class="fa fa-btn fa-user-friends"></i> フォロワー {{ $follower_count }}</p><hr>
       @foreach ($users as $user)
         @if ($user->isFollowing($auth_user->id))
           <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $user->id])}}">

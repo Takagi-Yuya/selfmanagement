@@ -7,7 +7,7 @@
       <h2>他己分析タイムライン</h2>
         <div class="row">
           <div class="col-md-8 mt-5 mb-3">
-            <form id="form1" action="{{ action('Admin\SearchController@search') }}" method="get" class="form-inline float-right">
+            <form id="form1" action="{{ action('Admin\SearchController@search') }}" method="get" class="form-inline">
               <div class="form-group">
                 <input id="sbox1" type="text" name="keyword" placeholder="キーワードを入力">
                 <button id="sbtn1" type="submit"><i class="fas fa-search"></i></button>

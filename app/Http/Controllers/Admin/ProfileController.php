@@ -16,7 +16,21 @@ class ProfileController extends Controller
         $profile = Profile::find($auth_user->id);
         $users = User::where('id', '!=', $auth_user->id)->get();
 
-        return view('admin.profile.list', ['profile' => $profile, 'users' => $users, 'auth_user' => $auth_user]);
+        $follow_count = 0;
+        $follower_count = 0;
+
+        foreach ($users as $user){
+            if ($auth_user->isFollowing($user->id) && $user->isFollowing($auth_user->id)) {
+                $follow_count = $follow_count + 1;
+                $follower_count = $follower_count + 1;
+            } elseif ($auth_user->isFollowing($user->id)) {
+                $follow_count = $follow_count + 1;
+            } elseif ($user->isFollowing($auth_user->id)) {
+                $follower_count = $follower_count + 1;
+            }
+        }
+
+        return view('admin.profile.list', ['profile' => $profile, 'users' => $users, 'auth_user' => $auth_user, 'follower_count' => $follower_count, 'follow_count' => $follow_count]);
     }
 
     public function add()
