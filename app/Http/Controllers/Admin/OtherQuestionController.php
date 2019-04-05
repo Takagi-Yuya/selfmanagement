@@ -14,14 +14,14 @@ class OtherQuestionController extends Controller
 {
     public function list()
     {
-        $questions = OtherQuestion::with(['other_answers', 'profile', 'user', 'profile'])->where('user_id', Auth::id())->orderBy('updated_at', 'desc')->paginate(10);
+        $questions = OtherQuestion::with(['other_answers', 'profile', 'user', 'profile'])->where('user_id', Auth::id())->orderBy('updated_at', 'desc')->paginate(5);
 
         return view('admin.other.list', ['questions' => $questions]);
     }
 
     public function index()
     {
-        $questions = OtherQuestion::with(['other_answers', 'profile'])->orderBy('created_at', 'desc')->paginate(10);
+        $questions = OtherQuestion::with(['other_answers', 'profile'])->orderBy('created_at', 'desc')->paginate(5);
         $user = Auth::user();
 
         return view('admin.timeline.index', ['questions' => $questions, 'user' => $user]);
