@@ -45,16 +45,14 @@
       @foreach ($users as $user)
         @if ($auth_user->isFollowing($user->id))
           <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $user->id])}}">
-            @if ($user->profile != null)
-              @if ($user->profile->image_path != null)
-                <li class="mb-2">
-                  <img src="{{ asset('storage/image/' . $user->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $user->profile->name }}
-                </li>
-              @else
-                <li class="mb-2">
-                  <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $user->profile->name }}
-                </li>
-              @endif
+            @if ($user->profile != null && $user->profile->image_path != null)
+              <li class="mb-2">
+                <img src="{{ asset('storage/image/' . $user->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $user->profile->name }}
+              </li>
+            @elseif ($user->profile != null && $user->profile->image_path == null)
+              <li class="mb-2">
+                <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $user->profile->name }}
+              </li>
             @else
               <li class="mb-2">
                 <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $user->name }}
@@ -69,16 +67,14 @@
       @foreach ($users as $user)
         @if ($user->isFollowing($auth_user->id))
           <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $user->id])}}">
-            @if ($user->profile != null)
-              @if ($user->profile->image_path != null)
-                <li class="mb-2">
-                  <img src="{{ asset('storage/image/' . $user->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $user->profile->name }}
-                </li>
-              @else
+            @if ($user->profile != null && $user->profile->image_path != null)
+              <li class="mb-2">
+                <img src="{{ asset('storage/image/' . $user->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $user->profile->name }}
+              </li>
+            @elseif ($user->profile != null && $user->profile->image_path == null)
                 <li class="mb-2">
                   <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $user->profile->name }}
                 </li>
-              @endif
             @else
               <li class="mb-2">
                 <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-mini mr-2">{{ $user->name }}
