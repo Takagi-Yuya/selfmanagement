@@ -85,6 +85,25 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            button {
+              border-radius: 0;
+              width: 400px;
+              height: 50px;
+              font-size: 0.9rem
+            }
+            .btn-flat-border {
+              display: inline-block;
+              padding: 0.3em 1em;
+              text-decoration: none;
+              color: #FFA000;
+              border: solid 2px #FFA000;
+              border-radius: 3px;
+              transition: .4s;
+            }
+            .btn-flat-border:hover {
+              background: #FFA000;
+              color: white;
+            }
         </style>
     </head>
     <body>
@@ -94,6 +113,20 @@
                     @auth
                         <a href="{{ url('/home') }}"><i class="fas fa-home"></i>ホーム</a>
                     @else
+
+                    <!--テストユーザー　ショートカットログイン用-->
+                    <div class="">
+
+                    </div>
+                    <form method='POST' action="{{ route('login') }}">
+                      @csrf
+                      <input id="email" type="hidden" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="e@example.com" required autofocus>
+                      <input id="password" type="hidden" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" value="yuya0201" required>
+                      <button type="info" class="btn-flat-border">
+                        <i class="fas fa-check"></i>{{ __(' テストユーザーログイン (ポートフォリオ閲覧用)') }}
+                      </button>
+                    </form>
+
                         <a href="{{ route('login') }}"><i class="fas fa-key"></i>ログイン</a>
 
                         @if (Route::has('register'))

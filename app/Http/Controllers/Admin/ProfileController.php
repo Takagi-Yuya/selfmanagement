@@ -53,11 +53,10 @@ class ProfileController extends Controller
             $profile->image_path = null;
         }
 
-        unset($form['_token']);
-        unset($form['image']);
+        unset($form['_token'],$form['image']);
+        //unset($form['image']);
 
-        $profile->fill($form);
-        $profile->save();
+        $profile->fill($form)->save();
 
         return redirect('admin/profile/list');
     }
@@ -88,8 +87,7 @@ class ProfileController extends Controller
 
         unset($profile_form['_token']);
 
-        $profile -> fill($profile_form);
-        $profile -> save();
+        $profile->fill($profile_form)->save();
 
         return redirect('admin/profile/list');
     }
