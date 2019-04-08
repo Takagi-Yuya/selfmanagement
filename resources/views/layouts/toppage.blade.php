@@ -77,21 +77,23 @@
           color: white;
         }
         .login {
-          color: green;
-          border: solid 2px green;
+          font-size: 20px;
+          color: #38c172;
+          border: solid 2px #38c172;
           background-color: #f8fafc8a;
         }
         .login:hover {
-          background: green;
+          background: #38c172;
           color: white;
         }
         .register {
-          color: blue;
-          border: solid 2px blue;
+          font-size: 20px;
+          color: #3490dc;
+          border: solid 2px #3490dc;
           background-color: #f8fafc8a;
         }
         .register:hover {
-          background: blue;
+          background: #3490dc;
           color: white;
         }
         .padding-original {
