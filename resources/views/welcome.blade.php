@@ -15,7 +15,7 @@
           @csrf
           <input id="email" type="hidden" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="e@example.com" required autofocus>
           <input id="password" type="hidden" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" value="yuya0201" required>
-          <button action="{{ route('login') }}" class="btn-flat-border test">
+          <button class="btn-flat-border test">
             <i class="fas fa-check"></i>{{ __(' test user login (ポートフォリオ閲覧用)') }}
           </button>
         </form>
