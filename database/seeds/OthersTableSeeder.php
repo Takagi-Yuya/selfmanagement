@@ -15,21 +15,21 @@ class OtherQuestionAnswersTableSeeder extends Seeder
      */
     public function run()
     {
-        $question_dammy = 'Q.ダミー質問です質問です質問です質問です質問です質問です質問です質問です質問です';
-        $answer_dammy = 'A.ダミー回答です回答です回答です回答です回答です回答です回答です回答です回答です回答です';
-        $reason_dammy = 'why?.ダミー理由です理由です理由です理由です理由です理由です理由です理由です理由です理由です';
+        //$question_dammy = 'Q.'.str_random(15).'？';
+        //$answer_dammy = 'A.'.str_random(18);
+        //$reason_dammy = 'why?.'.str_random(21);
 
         for ($i = 1; $i <= 10; $i++) {
       	    	$question = new OtherQuestion;
-      	    	$question->question = $question_dammy;
-      		    $question->user_id = 1;
+      	    	$question->question = 'Q.'.str_random(15).'？';
+      		    $question->user_id = mt_rand(1, 3);
       		    $question->save();
 
             for ($j = 1; $j <= 5; $j++) {
                 $other = new OtherAnswer;
-                $other->answer = $answer_dammy;
-                $other->reason = $reason_dammy;
-                $other->user_id = rand(2, 3);
+                $other->answer = 'A.'.str_random(18);
+                $other->reason = 'why?.'.str_random(21);
+                $other->user_id = mt_rand(4, 6);
                 $question->other_answers()->save($other);
             }
         }
