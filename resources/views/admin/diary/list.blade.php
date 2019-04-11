@@ -29,7 +29,7 @@
             </div>
           @endforeach
         @else
-          <p>日記を作成しよう！</p>
+          <h4><i class="far fa-thumbs-up"></i>日記を作成しよう！</h4>
         @endif
         <br>
         <div class="row">

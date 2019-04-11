@@ -139,7 +139,7 @@
         </div>
       </div>
       @else
-        <p>”現在の自分”→”目標とする未来の自分”　2つのポートフォリオを作成しよう！</p>
+        <h4><i class="far fa-thumbs-up"></i>”現在の自分”→”目標とする未来の自分”　2つのポートフォリオを作成しよう！</h4>
         <div class="row">
           <div class="col-md-10 text-right">
             <a href="{{ action('Admin\PortfolioController@add') }}" role='button' class='btn btn-success'>新規作成</a>

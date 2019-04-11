@@ -23,7 +23,7 @@
             </div>
           @endforeach
         @else
-          <p>自己分析をはじめよう！</p>
+          <h4><i class="far fa-thumbs-up"></i>自己分析をはじめよう！</h4>
         @endif
         <br>
         <div class="row">

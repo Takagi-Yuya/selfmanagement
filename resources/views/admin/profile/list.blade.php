@@ -30,7 +30,7 @@
           </div>
         </div>
       @else
-        <p>プロフィールを作成しよう！</p>
+        <h4><i class="far fa-thumbs-up"></i>プロフィールを作成しよう！</h4>
         <div class="row">
           <div class="col-md-8 mx-auto text-right">
             <a href="{{ action('Admin\ProfileController@add') }}" role='button' class='btn btn-success'>新規作成</a>
