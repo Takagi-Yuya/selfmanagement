@@ -21,5 +21,5 @@ class DiaryTest extends TestCase
     {
       $response = $this->get('admin/diary/list');
       $response->assertStatus(302);
-     }
+    }
 }
