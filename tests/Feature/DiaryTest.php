@@ -5,8 +5,6 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 
 class DiaryTest extends TestCase
 {
@@ -22,4 +20,5 @@ class DiaryTest extends TestCase
       $response = $this->get('admin/diary/list');
       $response->assertStatus(302);
     }
+    
 }
