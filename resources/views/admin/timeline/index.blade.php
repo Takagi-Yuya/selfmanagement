@@ -7,7 +7,7 @@
       <h2>他己分析タイムライン</h2>
         <div class="row">
           <div class="col-md-8 mt-5 mb-3">
-            @include ('partials.form_search')
+            @include ('partials.search.form_search')
           </div>
         </div>
       @foreach ($questions as $question)
