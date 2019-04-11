@@ -5,8 +5,6 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 
 class DiaryTest extends TestCase
 {
@@ -20,6 +18,11 @@ class DiaryTest extends TestCase
     public function testList()
     {
       $response = $this->get('admin/diary/list');
+<<<<<<< HEAD
       $response->assertStatus(302);
     }
+=======
+      $response->assertStatus(200);
+     }
+>>>>>>> parent of b19166b... 🎨 : Change 認証メール機能をsendgridに変更
 }
