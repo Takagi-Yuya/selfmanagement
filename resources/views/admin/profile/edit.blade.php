@@ -7,13 +7,7 @@
       <h2>プロフィール/編集</h2>
       <br>
       <form action="{{ action("Admin\ProfileController@update") }}" method="post" enctype="multipart/form-data">
-        @if (count($errors) > 0)
-          <ul>
-            @foreach ($errors->all() as $e)
-            <li>{{ $e }}</li>
-            @endforeach
-          </ul>
-        @endif
+        @include('partials.errors.form_errors')
         <div class="form-group row">
           <label class="col-md-2" for="name"><span class="badge badge-danger">必須</span>名前：</label>
           <div class="col-md-10">

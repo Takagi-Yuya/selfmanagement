@@ -30,13 +30,7 @@
         </div>
       </div>
       <form action="{{ action("Admin\OtherAnswerController@update") }}" method="post" enctype="multipart/form-data">
-        @if (count($errors) > 0)
-          <ul>
-            @foreach ($errors->all() as $e)
-            <li>{{ $e }}</li>
-            @endforeach
-          </ul>
-        @endif
+        @include('partials.errors.form_errors')
         <div class="form-group row">
           <label class="col-md-2" for="answer"><span class="badge badge-danger">必須</span>A.回答：</label>
           <div class="col-md-10">

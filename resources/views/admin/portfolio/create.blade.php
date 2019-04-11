@@ -7,13 +7,7 @@
       <h2>ポートフォリオ/新規作成</h2>
       <br>
       <form action="{{ action("Admin\PortfolioController@create") }}" method="post" enctype="multipart/form-data">
-        @if (count($errors) > 0)
-          <ul>
-            @foreach ($errors->all() as $e)
-            <li>{{ $e }}</li>
-            @endforeach
-          </ul>
-        @endif
+        @include('partials.errors.form_errors')
         <br>
         <p>※スキル項目欄には自分の出来る事もしくはこれから習得したいスキルを入力</p>
         <p>※数値入力欄には10段階評価として数字を入力</p>
