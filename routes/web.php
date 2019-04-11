@@ -22,7 +22,9 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/about', 'HomeController@about');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth' ,'middleware' => 'verified'], function() {
+//sendgrid　アカウント再開待ち　それまで認証無し
+//Route::group(['prefix' => 'admin', 'middleware' => 'auth' ,'middleware' => 'verified'], function() {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('profile/list', 'Admin\ProfileController@list');
     Route::get('profile/create', 'Admin\ProfileController@add');
     Route::post('profile/create', 'Admin\ProfileController@create');
