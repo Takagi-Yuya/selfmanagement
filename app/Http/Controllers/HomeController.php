@@ -3,7 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\User;
+use App\Portfolio;
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
+
 
 class HomeController extends Controller
 {
@@ -24,9 +29,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $user = auth()->user();
+        $portfolio = Portfolio::find($user->id);
 
-        return view('home',['users' => $users]);
+        return view('home',['user' => $user, 'portfolio' => $portfolio]);
     }
 
     public function about()

@@ -27,7 +27,7 @@
 <body>
     <div class='mb-3' id="app">
       @include('partials.navbar.form_navbar')
-        <main class="py-4">
+        <main class="py-4 pt-5">
             @yield('content')
         </main>
     </div>
