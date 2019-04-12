@@ -3,6 +3,9 @@
 /public/storage
 /storage/*.key
 /vendor
+/.idea
+/.vscode
+/.vagrant
 .env
 .env.example
 .env.testing
