@@ -31,8 +31,9 @@ class HomeController extends Controller
     {
         $user = auth()->user();
         $portfolio = Portfolio::find($user->id);
+        $today = Carbon::now();
 
-        return view('home',['user' => $user, 'portfolio' => $portfolio]);
+        return view('home',['user' => $user, 'portfolio' => $portfolio, 'today' => $today]);
     }
 
     public function about()

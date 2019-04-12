@@ -192,3 +192,29 @@ h2:after {
     width: 350px;
     left:  -30px;
 }
+
+.balloon1{
+  position: relative;
+  padding: 15px;
+  border-radius: 10px;
+  color: #495057;
+  background-color: #38c0c140;
+  margin-left: 10px;
+}
+.balloon1 .icon{
+  position: absolute;
+  left: -60px;
+  top: 10;
+}
+.balloon1::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -15px;
+  top: 20px;
+  border-right: 15px solid #38c0c140;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
