@@ -92,11 +92,11 @@ URL → https://whispering-earth-41170.herokuapp.com/
 作成前の企画段階に作成した資料等です。
 <br>
 <br>
-・ワイヤーフレーム
+・リーンキャンパス
 <br>
 https://docs.google.com/spreadsheets/d/1BdHtL7ENZrpCYgW6Jyfb0VqZLrRlv7ycXkGl2WcBBfk/edit#gid=1709318117
 <br>
-・リーンキャンパス
+・ワイヤーフレーム
 <br>
 https://docs.google.com/spreadsheets/d/1ZdDCozCTeCSxpd1NAkDc4Hh3UkW1PrpJYBACNbBhhpc/edit#gid=0
 <br>
