@@ -10,9 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/err', function () {
-    trigger_error("エラーのテスト!", E_USER_ERROR);
-});
 
 Route::get('/', function () {
     return view('welcome');
