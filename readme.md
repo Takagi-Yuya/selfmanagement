@@ -92,14 +92,14 @@ URL → https://whispering-earth-41170.herokuapp.com/
 作成前の企画段階に作成した資料等です。
 <br>
 <br>
-ワイヤーフレーム
+・ワイヤーフレーム
 <br>
-→　https://docs.google.com/spreadsheets/d/1BdHtL7ENZrpCYgW6Jyfb0VqZLrRlv7ycXkGl2WcBBfk/edit#gid=1709318117
+https://docs.google.com/spreadsheets/d/1BdHtL7ENZrpCYgW6Jyfb0VqZLrRlv7ycXkGl2WcBBfk/edit#gid=1709318117
 <br>
-リーンキャンパス
+・リーンキャンパス
 <br>
-→　https://docs.google.com/spreadsheets/d/1ZdDCozCTeCSxpd1NAkDc4Hh3UkW1PrpJYBACNbBhhpc/edit#gid=0
+https://docs.google.com/spreadsheets/d/1ZdDCozCTeCSxpd1NAkDc4Hh3UkW1PrpJYBACNbBhhpc/edit#gid=0
 <br>
-Qiita記事（プロダクト企画）
+・Qiita記事（プロダクト企画）
 <br>
-→　https://qiita.com/Takagi-Yuya/items/309997b67e5ef0c8bf9b
+https://qiita.com/Takagi-Yuya/items/309997b67e5ef0c8bf9b
