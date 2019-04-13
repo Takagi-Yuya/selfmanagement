@@ -13,7 +13,7 @@
       <div class="pt-5">
         <form method='POST' action="{{ route('login') }}">
           @csrf
-          <input id="email" type="hidden" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="testuser@example.com" required autofocus>
+          <input id="email" type="hidden" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="a@example.com" required autofocus>
           <input id="password" type="hidden" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" value="password" required>
           <button class="btn-flat-border test">
             <i class="fas fa-check"></i>{{ __(' test user login (ポートフォリオ閲覧用)') }}
