@@ -46,13 +46,6 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-      // CSRFトークンが存在しない、トークン不一致時に発生
-      // TokenMismatchException例外を500ではなく403で処理する
-      if ($exception instanceof TokenMismatchException) {
-          abort(403);
-      }
-
-
         return parent::render($request, $exception);
     }
 }
