@@ -11,6 +11,11 @@
 |
 */
 
+//追加
+Route::get('/err', function () {
+    trigger_error("エラーのテスト!", E_USER_ERROR);
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
