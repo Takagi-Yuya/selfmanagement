@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Diary;
 use Illuminate\Support\Facades\Auth;
+use Storage;
 
 
 class DiaryController extends Controller
@@ -32,8 +33,8 @@ class DiaryController extends Controller
         $form = $request->all();
 
         if (isset($form['image'])) {
-            $path = $request->file('image')->store('public/image');
-            $diaries->image_path = basename($path);
+            $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+            $diaries->image_path = Storage::disk('s3')->url($path);;
         } else {
             $diaries->image_path = null;
         }
@@ -62,8 +63,8 @@ class DiaryController extends Controller
         $diary_form = $request->all();
 
         if (isset($diary_form['image'])) {
-            $path = $request->file('image')->store('public/image');
-            $diary->image_path = basename($path);
+            $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+            $diary->image_path = Storage::disk('s3')->url($path);;
             unset($diary_form['image']);
         }
 

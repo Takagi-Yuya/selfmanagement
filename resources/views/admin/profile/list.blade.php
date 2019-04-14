@@ -10,7 +10,7 @@
         <div class="row box p-5">
           <div class="image col-md-8 mx-auto">
             @if ($profile->image_path != null)
-              <img src="{{ asset('storage/image/' . $profile->image_path) }}" alt="" class="image-profile mx-auto">
+              <img src="{{ $profile->image_path }}" alt="" class="image-profile mx-auto">
             @else
               <img src="{{ asset('images/noprofileimage.jpg') }}" alt="" class="image-profile mx-auto">
             @endif
@@ -47,7 +47,7 @@
           <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $user->id])}}">
             @if ($user->profile != null && $user->profile->image_path != null)
               <li class="mb-2">
-                <img src="{{ asset('storage/image/' . $user->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $user->profile->name }}
+                <img src="{{ $user->profile->image_path }}" alt="" class="image-mini mr-2">{{ $user->profile->name }}
               </li>
             @elseif ($user->profile != null && $user->profile->image_path == null)
               <li class="mb-2">
@@ -69,7 +69,7 @@
           <a href="{{ action('Admin\OtherUserProfileController@show', ['id' => $user->id])}}">
             @if ($user->profile != null && $user->profile->image_path != null)
               <li class="mb-2">
-                <img src="{{ asset('storage/image/' . $user->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $user->profile->name }}
+                <img src="{{ $user->profile->image_path }}" alt="" class="image-mini mr-2">{{ $user->profile->name }}
               </li>
             @elseif ($user->profile != null && $user->profile->image_path == null)
                 <li class="mb-2">

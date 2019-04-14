@@ -27,7 +27,7 @@
                         </p>
                       @else
                         <p class="image">
-                          <img src="{{ asset('storage/image/' . $other_answer->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $other_answer->profile->name }}
+                          <img src="{{ $other_answer->profile->image_path }}" alt="" class="image-mini mr-2">{{ $other_answer->profile->name }}
                         </p>
                       @endif
                     @endif

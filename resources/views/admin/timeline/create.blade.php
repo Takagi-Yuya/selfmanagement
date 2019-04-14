@@ -20,7 +20,7 @@
               </p>
             @else
               <p class="image">
-                <img src="{{ asset('storage/image/' . $question->profile->image_path) }}" alt="" class="image-mini mr-2">{{ $question->profile->name }}
+                <img src="{{ $question->profile->image_path }}" alt="" class="image-mini mr-2">{{ $question->profile->name }}
               </p>
             @endif
           @endif
