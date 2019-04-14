@@ -7,7 +7,7 @@
 自己分析・他己分析(他のユーザーからの回答)・自分ポートフォリオの作成等が行えます。
 <br>
 <br>
-URL → https://whispering-earth-41170.herokuapp.com/
+URL → https://www.selmane.work/
 <br>
 <br>
 [email]: a@example.com
