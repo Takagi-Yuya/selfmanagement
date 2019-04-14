@@ -36,7 +36,7 @@ class AnalysisController extends Controller
         $analyses->fill($form);
         $analyses->save();
 
-        return redirect('admin\analysis\list');
+        return redirect('admin/analysis/list');
     }
 
     public function edit(Request $request)
@@ -58,14 +58,14 @@ class AnalysisController extends Controller
         $analysis->fill($analysis_form);
         $analysis->save();
 
-        return redirect('admin\analysis\list');
+        return redirect('admin/analysis/list');
     }
 
     public function delete(Request $request)
     {
       $analysis = Analysis::where('id', $request->id)->delete();
 
-        return redirect('admin\analysis\list');
+        return redirect('admin/analysis/list');
     }
 
 

@@ -44,7 +44,7 @@ class DiaryController extends Controller
         $diaries->fill($form);
         $diaries->save();
 
-        return redirect('admin\diary\list');
+        return redirect('admin/diary/list');
     }
 
     public function edit(Request $request)
@@ -77,7 +77,7 @@ class DiaryController extends Controller
         $diary->fill($diary_form);
         $diary->save();
 
-        return redirect('admin\diary\list');
+        return redirect('admin/diary/list');
 
     }
 
@@ -85,7 +85,7 @@ class DiaryController extends Controller
     {
         $diary = Diary::where('id', $request->id)->delete();
 
-        return redirect('admin\diary\list');
+        return redirect('admin/diary/list');
     }
 
 }

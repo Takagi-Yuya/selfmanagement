@@ -42,7 +42,7 @@ class OtherAnswerController extends Controller
 
         $answer->fill($form)->save();
 
-        return redirect('admin\timeline\index');
+        return redirect('admin/timeline/index');
     }
 
     public function edit(Request $request)
@@ -64,14 +64,14 @@ class OtherAnswerController extends Controller
 
         $answer->fill($answer_form)->save();
 
-        return redirect('admin\timeline\index');
+        return redirect('admin/timeline/index');
     }
 
     public function delete(Request $request)
     {
         $answers = OtherAnswer::where('id', $request->id)->delete();
 
-        return redirect('admin\timeline\index');
+        return redirect('admin/timeline/index');
     }
 
 

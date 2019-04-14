@@ -36,7 +36,7 @@ class PortfolioController extends Controller
 
         $portfolio->fill($form)->save();
 
-        return redirect('admin\portfolio\list');
+        return redirect('admin/portfolio/list');
     }
 
     public function edit(Request $request)

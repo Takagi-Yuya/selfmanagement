@@ -46,7 +46,7 @@ class OtherQuestionController extends Controller
 
         $question->fill($form)->save();
 
-        return redirect('admin\other\list');
+        return redirect('admin/other/list');
     }
 
     public function edit(Request $request)
@@ -67,7 +67,7 @@ class OtherQuestionController extends Controller
 
         $question->fill($question_form)->save();
 
-        return redirect('admin\other\list');
+        return redirect('admin/other/list');
     }
 
     public function delete(Request $request)
@@ -75,7 +75,7 @@ class OtherQuestionController extends Controller
         $question = OtherQuestion::where('id', $request->id)->delete();
         $answers = OtherAnswer::where('question_id', $request->id)->delete();
 
-        return redirect('admin\other\list');
+        return redirect('admin/other/list');
     }
 
 
