@@ -12,8 +12,8 @@ return [
 
   // Global "From" Address
   'from' => [
-      'address' => env('MAIL_FROM_ADDRESS', null),
-      'name' => env('MAIL_FROM_NAME', null)
+      'address' => env('MAIL_FROM_ADDRESS', 'selmane@example.com'),
+      'name' => env('MAIL_FROM_NAME', 'セルマネ運営')
   ],
 
   // E-Mail Encryption Protocol
