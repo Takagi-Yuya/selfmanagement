@@ -73,7 +73,7 @@
     @endif
   </div>
 
-  <hr>
+  <!--<hr>
   <div class="row">
     <div class="col-md-10 mx-auto text-center">
       <a href="{{ action('Admin\ProfileController@list') }}" class="border_slide_btn m-4">Profile</a>
@@ -85,7 +85,7 @@
       <a href="{{ url('/about') }}" class="border_slide_btn m-4">About</a>
     </div>
   </div>
-  <hr>
-  </div>
+  <hr>-->
+
 </div>
 @endsection
