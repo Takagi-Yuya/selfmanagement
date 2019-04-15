@@ -41,7 +41,7 @@ class ResetPasswordNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->from('admin@example.com', config('app.name'))
+            ->from('selmane@example.com', 'セルマネ運営')
             ->subject('パスワード再発行')
             ->line('パスワード再発行リクエストがありましたので、メッセージ送信しました。')
             ->action('パスワード再設定', url(config('app.url').route('password.reset', $this->token, false)))
