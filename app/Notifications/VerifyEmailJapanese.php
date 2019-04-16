@@ -58,7 +58,7 @@ class VerifyEmailJapanese extends Notification
     protected function verificationUrl($notifiable)
     {
         return URL::temporarySignedRoute(
-            'verification.verify', Carbon::now()->addMinutes(3000), ['id' => $notifiable->getKey()]
+            'verification.verify', Carbon::now()->addMinutes(1440), ['id' => $notifiable->getKey()]
         );
     }
 

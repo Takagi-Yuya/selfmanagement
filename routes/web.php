@@ -23,7 +23,6 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/homes', 'HomeController@index2')->name('homes');
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/about', 'HomeController@about');
 });
