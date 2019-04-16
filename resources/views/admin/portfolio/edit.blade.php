@@ -13,35 +13,35 @@
         <p>※数値入力欄には10段階評価として数字を入力</p>
         <br>
         <div class="form-group row">
-          <label class="col-md-6" for="item_a">スキル項目A<span class="badge badge-danger">必須</span></label>
+          <label class="col-md-6 ws-nr" for="item_a">スキル項目A<span class="badge badge-danger">必須</span></label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="item_a" value="{{ $portfolio_form->item_a }}">
           </div>
-          <label class="col-md-6" for="value_before_a">現在の数値を1~10で設定<span class="badge badge-danger">必須</span></label>
+          <label class="col-md-6 ws-nr" for="value_before_a">現在の数値を1~10で設定<span class="badge badge-danger">必須</span></label>
           @include ('partials.portfolios.form_edit', ['value' => 'value_before_a'])
-          <label class="col-md-6" for="value_after_a">目標とする数値を1~10で設定<span class="badge badge-danger">必須</span></label>
+          <label class="col-md-6 ws-nr" for="value_after_a">目標とする数値を1~10で設定<span class="badge badge-danger">必須</span></label>
           @include ('partials.portfolios.form_edit', ['value' => 'value_after_a'])
         </div>
         <hr>
         <div class="form-group row">
-          <label class="col-md-6" for="item_b">スキル項目B<span class="badge badge-danger">必須</span></label>
+          <label class="col-md-6 ws-nr" for="item_b">スキル項目B<span class="badge badge-danger">必須</span></label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="item_b" value="{{ $portfolio_form->item_b }}">
           </div>
-          <label class="col-md-6" for="value_before_b">現在の数値を1~10で設定<span class="badge badge-danger">必須</span></label>
+          <label class="col-md-6 ws-nr" for="value_before_b">現在の数値を1~10で設定<span class="badge badge-danger">必須</span></label>
           @include ('partials.portfolios.form_edit', ['value' => 'value_before_b'])
-          <label class="col-md-6" for="value_after_b">目標とする数値を1~10で設定<span class="badge badge-danger">必須</span></label>
+          <label class="col-md-6 ws-nr" for="value_after_b">目標とする数値を1~10で設定<span class="badge badge-danger">必須</span></label>
           @include ('partials.portfolios.form_edit', ['value' => 'value_after_b'])
         </div>
         <hr>
         <div class="form-group row">
-          <label class="col-md-6" for="item_c">スキル項目C<span class="badge badge-danger">必須</span></label>
+          <label class="col-md-6 ws-nr" for="item_c">スキル項目C<span class="badge badge-danger">必須</span></label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="item_c" value="{{ $portfolio_form->item_c }}">
           </div>
-          <label class="col-md-6" for="value_before_c">現在の数値を1~10で設定<span class="badge badge-danger">必須</span></label>
+          <label class="col-md-6 ws-nr" for="value_before_c">現在の数値を1~10で設定<span class="badge badge-danger">必須</span></label>
           @include ('partials.portfolios.form_edit', ['value' => 'value_before_c'])
-          <label class="col-md-6" for="value_after_c">目標とする数値を1~10で設定<span class="badge badge-danger">必須</span></label>
+          <label class="col-md-6 ws-nr" for="value_after_c">目標とする数値を1~10で設定<span class="badge badge-danger">必須</span></label>
           @include ('partials.portfolios.form_edit', ['value' => 'value_after_c'])
         </div>
         <hr>

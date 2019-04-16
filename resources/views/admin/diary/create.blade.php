@@ -9,13 +9,13 @@
       <form action="{{ action("Admin\DiaryController@create") }}" method="post" enctype="multipart/form-data">
         @include('partials.errors.form_errors')
         <div class="form-group row">
-          <label class="col-md-2" for="title"><span class="badge badge-danger">必須</span>タイトル：</label>
+          <label class="col-md-2 ws-nr" for="title"><span class="badge badge-danger">必須</span>タイトル：</label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="title" value="{{ old("title") }}" placeholder="例）今日あった出来事">
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-md-2" for="body"><span class="badge badge-danger">必須</span>内容：</label>
+          <label class="col-md-2 ws-nr" for="body"><span class="badge badge-danger">必須</span>内容：</label>
           <div class="col-md-10">
             <textarea class="form-control" name="body" rows="20" placeholder="例）桜が綺麗な季節なので友人とお花見をした。">{{ old("body") }}</textarea>
           </div>

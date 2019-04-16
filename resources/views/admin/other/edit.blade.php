@@ -9,7 +9,7 @@
       <form action="{{ action("Admin\OtherQuestionController@update") }}" method="post" enctype="multipart/form-data">
         @include('partials.errors.form_errors')
         <div class="form-group row">
-          <label class="col-md-2" for="question"><span class="badge badge-danger">必須</span>Q.質問：</label>
+          <label class="col-md-2 ws-nr" for="question"><span class="badge badge-danger">必須</span>Q.質問：</label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="question" value="{{ $question_form->question }}">
           </div>

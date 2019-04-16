@@ -9,19 +9,19 @@
       <form action="{{ action("Admin\AnalysisController@update") }}" method="post" enctype="multipart/form-data">
         @include('partials.errors.form_errors')
         <div class="form-group row">
-          <label class="col-md-2" for="question"><span class="badge badge-danger">必須</span>Q.質問：</label>
+          <label class="col-md-2 ws-nr" for="question"><span class="badge badge-danger">必須</span>Q.質問：</label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="question" value="{{ $analysis_form->question }}">
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-md-2" for="answer"><span class="badge badge-danger">必須</span>A.回答：</label>
+          <label class="col-md-2 ws-nr" for="answer"><span class="badge badge-danger">必須</span>A.回答：</label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="answer" value="{{ $analysis_form->answer }}">
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-md-2" for="reason"><span class="badge badge-danger">必須</span>理由：</label>
+          <label class="col-md-2 ws-nr" for="reason"><span class="badge badge-danger">必須</span>理由：</label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="reason" value="{{ $analysis_form->reason }}">
           </div>

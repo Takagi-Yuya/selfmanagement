@@ -9,19 +9,19 @@
       <form action="{{ action("Admin\ProfileController@update") }}" method="post" enctype="multipart/form-data">
         @include('partials.errors.form_errors')
         <div class="form-group row">
-          <label class="col-md-2" for="name"><span class="badge badge-danger">必須</span>名前：</label>
+          <label class="col-md-2 ws-nr" for="name"><span class="badge badge-danger">必須</span>名前：</label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="name" value="{{ $profile_form->name }}">
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-md-2" for="goal">目標：</label>
+          <label class="col-md-2 ws-nr" for="goal">目標：</label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="goal" value="{{ $profile_form->goal }}">
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-md-2" for="introduction"><span class="badge badge-danger">必須</span>自己紹介：</label>
+          <label class="col-md-2 ws-nr" for="introduction"><span class="badge badge-danger">必須</span>自己紹介：</label>
           <div class="col-md-10">
             <textarea class="form-control" name="introduction" rows="20">{{ $profile_form->introduction }}</textarea>
           </div>

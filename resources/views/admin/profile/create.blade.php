@@ -9,19 +9,19 @@
       <form action="{{ action("Admin\ProfileController@create") }}" method="post" enctype="multipart/form-data">
         @include('partials.errors.form_errors')
         <div class="form-group row">
-          <label class="col-md-2" for="name"><span class="badge badge-danger">必須</span>名前：</label>
+          <label class="col-md-2 ws-nr" for="name"><span class="badge badge-danger">必須</span>名前：</label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="name" value="{{ old("name") }}" placeholder="例）セルマネ太郎">
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-md-2" for="goal">目標：</label>
+          <label class="col-md-2 ws-nr" for="goal">目標：</label>
           <div class="col-md-10">
             <input class="form-control" type="text" name="goal" value="{{ old("goal") }}" placeholder="例）自己管理の素晴らしさをみんなに知ってもらう事">
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-md-2" for="introduction"><span class="badge badge-danger">必須</span>自己紹介：</label>
+          <label class="col-md-2 ws-nr" for="introduction"><span class="badge badge-danger">必須</span>自己紹介：</label>
           <div class="col-md-10">
             <textarea class="form-control" name="introduction" rows="20" placeholder="例）初めまして。大阪生まれ大阪育ち、好きな食べ物はたこ焼きです。">{{ old("introduction") }}</textarea>
           </div>
