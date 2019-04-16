@@ -15,7 +15,7 @@
         <div class="form-group row">
           <label class="col-md-6" for="item_a">スキル項目A<span class="badge badge-danger">必須</span></label>
           <div class="col-md-10">
-            <input class="form-control" type="text" name="item_a" value="{{ old("item_a") }}">
+            <input class="form-control" type="text" name="item_a" value="{{ old("item_a") }}" placeholder="例）英語">
           </div>
           <label class="col-md-6" for="value_before_a">現在の数値を1~10で設定<span class="badge badge-danger">必須</span></label>
           @include ('partials.portfolios.form_create', ['value' => 'value_before_a'])
@@ -26,7 +26,7 @@
         <div class="form-group row">
           <label class="col-md-6" for="item_b">スキル項目B<span class="badge badge-danger">必須</span></label>
           <div class="col-md-10">
-            <input class="form-control" type="text" name="item_b" value="{{ old("item_a") }}">
+            <input class="form-control" type="text" name="item_b" value="{{ old("item_a") }}" placeholder="例）プログラミング">
           </div>
           <label class="col-md-6" for="value_before_b">現在の数値を1~10で設定<span class="badge badge-danger">必須</span></label>
           @include ('partials.portfolios.form_create', ['value' => 'value_before_b'])
@@ -37,7 +37,7 @@
         <div class="form-group row">
           <label class="col-md-6" for="item_c">スキル項目C<span class="badge badge-danger">必須</span></label>
           <div class="col-md-10">
-            <input class="form-control" type="text" name="item_c" value="{{ old("item_a") }}">
+            <input class="form-control" type="text" name="item_c" value="{{ old("item_a") }}" placeholder="例）財務管理">
           </div>
           <label class="col-md-6" for="value_before_c">現在の数値を1~10で設定<span class="badge badge-danger">必須</span></label>
           @include ('partials.portfolios.form_create', ['value' => 'value_before_c'])
@@ -48,7 +48,7 @@
         <div class="form-group row">
           <label class="col-md-6" for="item_d">スキル項目D</label>
           <div class="col-md-10">
-            <input class="form-control" type="text" name="item_d" value="{{ old("item_a") }}">
+            <input class="form-control" type="text" name="item_d" value="{{ old("item_a") }}" placeholder="例）怒りっぽさ (※逆に数値を下げる方の努力)">
           </div>
           <label class="col-md-6" for="value_before_d">現在の数値を1~10で設定</label>
           @include ('partials.portfolios.form_create', ['value' => 'value_before_d'])
@@ -59,7 +59,7 @@
         <div class="form-group row">
           <label class="col-md-6" for="item_e">スキル項目E</label>
           <div class="col-md-10">
-            <input class="form-control" type="text" name="item_e" value="{{ old("item_a") }}">
+            <input class="form-control" type="text" name="item_e" value="{{ old("item_a") }}" placeholder="例）100万円貯金">
           </div>
           <label class="col-md-6" for="value_before_e">現在の数値を1~10で設定</label>
           @include ('partials.portfolios.form_create', ['value' => 'value_before_e'])
@@ -70,7 +70,7 @@
         <div class="form-group row">
           <label class="col-md-6" for="item_f">スキル項目F</label>
           <div class="col-md-10">
-            <input class="form-control" type="text" name="item_f" value="{{ old("item_a") }}">
+            <input class="form-control" type="text" name="item_f" value="{{ old("item_a") }}" placeholder="例）腹筋">
           </div>
           <label class="col-md-6" for="value_before_f">現在の数値を1~10で設定</label>
           @include ('partials.portfolios.form_create', ['value' => 'value_before_f'])
@@ -81,7 +81,7 @@
         <div class="form-group row">
           <label class="col-md-6" for="item_g">スキル項目G</label>
           <div class="col-md-10">
-            <input class="form-control" type="text" name="item_g" value="{{ old("item_a") }}">
+            <input class="form-control" type="text" name="item_g" value="{{ old("item_a") }}" placeholder="例）家族サービス">
           </div>
           <label class="col-md-6" for="value_before_g">現在の数値を1~10で設定</label>
           @include ('partials.portfolios.form_create', ['value' => 'value_before_g'])
@@ -92,7 +92,7 @@
         <div class="form-group row">
           <label class="col-md-6" for="item_h">スキル項目H</label>
           <div class="col-md-10">
-            <input class="form-control" type="text" name="item_h" value="{{ old("item_a") }}">
+            <input class="form-control" type="text" name="item_h" value="{{ old("item_a") }}" placeholder="例）海外渡航">
           </div>
           <label class="col-md-6" for="value_before_h">現在の数値を1~10で設定</label>
           @include ('partials.portfolios.form_create', ['value' => 'value_before_h'])
@@ -103,7 +103,7 @@
         <div class="form-group row">
           <label class="col-md-6" for="item_i">スキル項目I</label>
           <div class="col-md-10">
-            <input class="form-control" type="text" name="item_i" value="{{ old("item_a") }}">
+            <input class="form-control" type="text" name="item_i" value="{{ old("item_a") }}" placeholder="例）読書">
           </div>
           <label class="col-md-6" for="value_before_i">現在の数値を1~10で設定</label>
           @include ('partials.portfolios.form_create', ['value' => 'value_before_i'])
@@ -114,7 +114,7 @@
         <div class="form-group row">
           <label class="col-md-6" for="item_j">スキル項目J</label>
           <div class="col-md-10">
-            <input class="form-control" type="text" name="item_j" value="{{ old("item_a") }}">
+            <input class="form-control" type="text" name="item_j" value="{{ old("item_a") }}" placeholder="例）料理">
           </div>
           <label class="col-md-6" for="value_before_j">現在の数値を1~10で設定</label>
           @include ('partials.portfolios.form_create', ['value' => 'value_before_j'])

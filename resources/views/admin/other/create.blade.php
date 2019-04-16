@@ -11,7 +11,7 @@
         <div class="form-group row">
           <label class="col-md-2" for="question"><span class="badge badge-danger">必須</span>Q.質問：</label>
           <div class="col-md-10">
-            <input class="form-control" type="text" name="question" value="{{ old("question") }}" placeholder="自分への質問を作成して他の人に回答してもらおう">
+            <input class="form-control" type="text" name="question" value="{{ old("question") }}" placeholder="例）私を動物に例えるなら何？">
           </div>
         </div>
         <p>※ここで作成した質問は”他己分析タイムライン”へ自動的に投稿されます。</p>

@@ -59,8 +59,8 @@
                 <p>なぜ？：{{ $answer->reason }}</p>
                 <div class="col-md-11 text-right">
                   @if ($answer->user_id == $user->id)
-                    <a href="{{ action('Admin\OtherAnswerController@edit', ['id' => $answer->id, 'id2' => $question->id]) }}" role='button' class='btn btn-success'>編集</a>
-                    <a href="{{ action('Admin\OtherAnswerController@delete', ['id' => $answer->id]) }}" role='button' class='btn btn-danger'>削除</a>
+                    <a href="{{ action('Admin\OtherAnswerController@edit', ['id' => $answer->id, 'id2' => $question->id]) }}" role='button' class='btn btn-success'>回答の編集</a>
+                    <a href="{{ action('Admin\OtherAnswerController@delete', ['id' => $answer->id]) }}" role='button' class='btn btn-danger'>回答の削除</a>
                   @endif
                 </div>
                 <hr size="3" color="gray">
@@ -71,7 +71,7 @@
           @if ($question->user_id != $user->id)
             <div class="row">
               <div class="col-md-11 text-right">
-                <a href="{{ action('Admin\OtherAnswerController@add', ['id' => $question->id]) }}" role='button' class='btn btn-success'>新規作成</a>
+                <a href="{{ action('Admin\OtherAnswerController@add', ['id' => $question->id]) }}" role='button' class='btn btn-success'>回答の新規作成</a>
               </div>
             </div>
           @endif
