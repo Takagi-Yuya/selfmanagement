@@ -27,7 +27,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index2()
     {
         $user = auth()->user();
         $portfolio = Portfolio::find($user->id);
@@ -35,6 +35,13 @@ class HomeController extends Controller
 
         return view('home',['user' => $user, 'portfolio' => $portfolio, 'today' => $today]);
     }
+
+    public function index()
+    {
+
+        return redirect('homes');
+    }
+
 
     public function about()
     {
