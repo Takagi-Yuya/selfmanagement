@@ -29,4 +29,8 @@ class AppServiceProvider extends ServiceProvider
             \URL::forceScheme('https');
         }
     }
+
+    protected $proxies = '*';
+
+    protected $headers = Request::HEADER_X_FORWARDED_AWS_ELB;
 }
