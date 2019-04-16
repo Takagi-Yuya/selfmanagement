@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Http\Request;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -31,7 +30,4 @@ class AppServiceProvider extends ServiceProvider
         }
     }
 
-    protected $proxies = '*';
-
-    protected $headers = Request::HEADER_X_FORWARDED_AWS_ELB;
 }
