@@ -31,7 +31,7 @@
                   ticks: {                      //最大値最小値設定
                       min: 0,                   //最小値
                       max: 10,                  //最大値
-                      fontSize: 15,             //フォントサイズ
+                      fontSize: 12,             //フォントサイズ
                       stepSize: 1               //軸間隔
                   },
               }],
@@ -43,7 +43,7 @@
                      display: true             //表示設定
                   },
                   ticks: {
-                      fontSize: 15             //フォントサイズ
+                      fontSize: 12             //フォントサイズ
                   },
               }],
           },
