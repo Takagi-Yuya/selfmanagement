@@ -23,7 +23,7 @@
         <div class="form-group row">
           <label class="col-md-2 ws-nr" for="reason"><span class="badge badge-danger">必須</span>理由：</label>
           <div class="col-md-10">
-            <input class="form-control" type="text" name="reason" value="{{ old("reason") }}" placeholder="例）自分で考えたものを形にできるので楽しそうだから。">
+            <textarea class="form-control" rows="5" name="reason" placeholder="例）自分で考えたものを形にできるので楽しそうだから。">{{ old("reason") }}</textarea>
           </div>
         </div>
         <div class="form-group row">
