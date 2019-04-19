@@ -17,7 +17,6 @@
       </h1>
     </div>
   </div>
-
   <div class="row p-5">
   @if ($user->profile != null)
     <div class="balloon1 col-md-4 mb-5 mr-auto">
@@ -38,8 +37,6 @@
       <hr size="3" color="gray">
       <p>目標：{{ $user->profile->goal }}</p>
       <hr size="3" color="gray">
-      <p>自己紹介：{{ $user->profile->introduction }}</p>
-      <hr size="3" color="gray">
     </div>
   @else
     <div class="balloon1 col-md-4 mb-5 mr-auto">
@@ -59,7 +56,6 @@
     </div>
   @endif
   </div>
-
   <div class="row">
     @if ($portfolio != null)
       <hr>
@@ -72,20 +68,5 @@
       </div>
     @endif
   </div>
-
-  <!--<hr>
-  <div class="row">
-    <div class="col-md-10 mx-auto text-center">
-      <a href="{{ action('Admin\ProfileController@list') }}" class="border_slide_btn m-4">Profile</a>
-      <a href="{{ action('Admin\AnalysisController@list') }}" class="border_slide_btn m-4">Self Analysis</a>
-      <a href="{{ action('Admin\OtherQuestionController@list') }}" class="border_slide_btn m-4">Other Self Analysis</a>
-      <a href="{{ action('Admin\OtherQuestionController@index') }}" class="border_slide_btn m-4">Timeline</a>
-      <a href="{{ action('Admin\DiaryController@list') }}" class="border_slide_btn m-4">Diary</a>
-      <a href="{{ action('Admin\PortfolioController@list') }}" class="border_slide_btn m-4">Portfolio</a>
-      <a href="{{ url('/about') }}" class="border_slide_btn m-4">About</a>
-    </div>
-  </div>
-  <hr>-->
-
 </div>
 @endsection
