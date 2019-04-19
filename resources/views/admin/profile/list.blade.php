@@ -26,7 +26,7 @@
             <hr size="3" color="gray">
           </div>
           <div class="col-md-8 mx-auto text-right">
-            <a href="{{ action('Admin\ProfileController@edit', ['user_id'=> $profile->user_id]) }}" role='button' class='btn btn-success'>編集</a>
+            <a href="{{ action('Admin\ProfileController@edit', ['user_id'=> $profile->user_id]) }}" role='button' class='btn btn-success'>編集・更新</a>
           </div>
         </div>
       @else

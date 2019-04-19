@@ -7,6 +7,11 @@
       <h2>自己分析/一覧</h2>
       <br>
         @if (count($analyses) > 0)
+          <div class="row">
+            <div class="col-md-11 text-right">
+              <a href="{{ action('Admin\AnalysisController@add') }}" role='button' class='btn btn-success'>新規作成</a>
+            </div>
+          </div>
           @foreach ($analyses as $analysis)
             <div class="row box p-4 mb-4">
               <div class="col-md-12">
@@ -25,12 +30,12 @@
         @else
           <h4><i class="far fa-thumbs-up"></i>自己分析をはじめよう！</h4>
         @endif
-        <br>
-        <div class="row">
-          <div class="col-md-11 text-right">
-            <a href="{{ action('Admin\AnalysisController@add') }}" role='button' class='btn btn-success'>新規作成</a>
-          </div>
+      <br>
+      <div class="row">
+        <div class="col-md-11 text-right">
+          <a href="{{ action('Admin\AnalysisController@add') }}" role='button' class='btn btn-success'>新規作成</a>
         </div>
+      </div>
     </div>
   </div>
   <div class="d-flex justify-content-center">

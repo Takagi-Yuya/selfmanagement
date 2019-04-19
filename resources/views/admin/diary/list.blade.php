@@ -7,6 +7,11 @@
       <h2>日記/一覧</h2>
       <br>
         @if (count($diaries) > 0)
+          <div class="row">
+            <div class="col-md-11 text-right">
+              <a href="{{ action('Admin\DiaryController@add') }}" role='button' class='btn btn-success'>新規作成</a>
+            </div>
+          </div>
           @foreach ($diaries as $diary)
             <div class="row box p-3 mb-5">
               <div class="col-md-8 mx-auto">
@@ -31,12 +36,12 @@
         @else
           <h4><i class="far fa-thumbs-up"></i>日記を作成しよう！</h4>
         @endif
-        <br>
-        <div class="row">
-          <div class="col-md-11 text-right">
-            <a href="{{ action('Admin\DiaryController@add') }}" role='button' class='btn btn-success'>新規作成</a>
-          </div>
+      <br>
+      <div class="row">
+        <div class="col-md-11 text-right">
+          <a href="{{ action('Admin\DiaryController@add') }}" role='button' class='btn btn-success'>新規作成</a>
         </div>
+      </div>
     </div>
   </div>
   <div class="d-flex justify-content-center">
