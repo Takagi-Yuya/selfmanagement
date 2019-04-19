@@ -18,14 +18,14 @@ var myBar = new Chart(ctx, {
         title: {                           //タイトル設定
             display: true,                 //表示設定
             fontSize: 30,                  //フォントサイズ
-            text: '目標のポートフォリオ'                //ラベル
+            text: '目標の自分グラフ'                //ラベル
         },
         scales: {                          //軸設定
             yAxes: [{                      //y軸設定
                 display: true,             //表示設定
                 scaleLabel: {              //軸ラベル設定
                    display: true,          //表示設定
-                   labelString: '10ステップ',  //ラベル
+                   labelString: '10段階評価',  //ラベル
                    fontSize: 15               //フォントサイズ
                 },
                 ticks: {                      //最大値最小値設定

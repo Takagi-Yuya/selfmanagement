@@ -4,11 +4,11 @@
 <div class="container">
   <div class="row">
     <div class="col-md-10 mx-auto">
-      <h2>ポートフォリオ/現在・未来</h2>
+      <h2>自分グラフ/現在・未来</h2>
       <br>
       @if ($portfolio != null)
-        <p><i class="far fa-check-circle"></i>スキルアップ出来たと感じたらポートフォリオを更新しよう！</p>
-        <p><i class="far fa-check-circle"></i>新たな目標が出来たらポートフォリオに項目を追加しよう！</p>
+        <p><i class="far fa-check-circle"></i>スキルアップ出来たと感じたら自分グラフを更新しよう！</p>
+        <p><i class="far fa-check-circle"></i>新たな目標が出来たら自分グラフに項目を追加しよう！</p>
         <br>
         @include ('partials.portfolios.now_chart')
         <br>
@@ -21,7 +21,7 @@
         </div>
       </div>
       @else
-        <h4><i class="far fa-thumbs-up"></i>”現在の自分”→”目標とする未来の自分”　2つのポートフォリオを作成しよう！</h4>
+        <h4><i class="far fa-thumbs-up"></i>”現在の自分”→”目標とする未来の自分”　2つの自分グラフを作成しよう！</h4>
         <div class="row">
           <div class="col-md-10 text-right">
             <a href="{{ action('Admin\PortfolioController@add') }}" role='button' class='btn btn-success'>新規作成</a>

@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 mx-auto">
-      <h2>ポートフォリオ/新規作成</h2>
+      <h2>自分グラフ/新規作成</h2>
       <br>
       <form action="{{ action("Admin\PortfolioController@create") }}" method="post" enctype="multipart/form-data">
         @include('partials.errors.form_errors')

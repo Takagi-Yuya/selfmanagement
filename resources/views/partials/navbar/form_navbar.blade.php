@@ -53,7 +53,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ action('Admin\PortfolioController@list') }}">
-                                    <i class="fas fa-chart-pie"></i>ポートフォリオ
+                                    <i class="fas fa-chart-pie"></i>自分グラフ
                                 </a>
                             </li>
                             <li class="nav-item">
